@@ -1,0 +1,251 @@
+.btn-primary, .btn-primary:active, .btn-primary:visited{
+    background-color: #2155c5;
+    color: white;
+    border-radius: 15px;
+    border:none;
+    transition: 0.2s;
+    font-weight: 450;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.btn:hover, .btn-info:hover, .btn-primary:hover {
+    background-color: #E5E4E3;
+    color:#2155c5;
+    border-radius: 15px;
+    border:1px solid #2155c5;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.2s;
+    font-weight: 450;
+}
+
+
+.navbar, .navbar-default, .navbar-brand{
+    background-color: #2887e6;
+    color: #fff;
+}
+
+.navbar-nav>li>a {
+    padding-top: 15px;
+    font-size: 17px;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.list-group-item {
+    background-color: #2155c5;
+}
+
+a.list-group-item, button.list-group-item {
+    color: #fff;
+}
+
+a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover {
+    color: #2887E6;
+    text-decoration: none;
+   
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.table{
+    margin: auto;
+}
+
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    border-bottom: 3px solid;
+    border-radius: 3px;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: #fff;
+}
+
+.table-responsive{
+    margin-top: 20px; 
+}
+
+.panel-primary>.panel-heading {
+    background-color: #2155c5;
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+    margin-top: 35px;
+    transform: translateX(-30px);
+    width: 1349px;
+    height: 380px;
+    border-radius: 5px;
+    background-color: #e9eceffa;
+    color: inherit;
+}
+
+.box, .box:active, .box:visited{
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 25px;
+    width: 220px;
+    height: 110px;
+    margin: 0;
+    border: 1px #fff;
+    border-radius: 10px;
+    box-shadow: 8px 10px 25px -6px rgba(0,0,0,0.62); 
+    -webkit-box-shadow: 8px 10px 25px -6px rgba(0,0,0,0.62);
+    transition: 0.2s;
+}
+
+.box a:hover{
+    color: #fff;
+    transition: 0.2s;
+ }
+
+.box:hover{
+    background-color: #2887e6;
+    transition: 0.2s;
+}
+
+.box:hover a{
+    display: block;
+    height: 100px;
+    color: #fff;
+    transition: 0.2s;
+}
+
+
+
+
+.container .jumbotronstudent, .container-fluid .jumbotronstudent {
+    padding-top: 50px;
+    margin-top: 35px;
+    transform: translateX(-30px);
+    width: 1349px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: #e9eceffa;
+    color: inherit;
+}
+
+.boxstudent, .boxstudent:active, .boxstudent:visited{
+    padding: 20px;
+    padding-top: 50px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 25px;
+    width: 220px;
+    height: 200px;
+    margin: 0;
+    border: 1px #fff;
+    border-radius: 10px;
+    box-shadow: 8px 10px 25px -6px rgba(0,0,0,0.62); 
+    -webkit-box-shadow: 8px 10px 25px -6px rgba(0,0,0,0.62);
+    transition: 0.2s;
+}
+
+.boxstudent a:hover{
+    color: #fff;
+    transition: 0.2s;
+ }
+
+.boxstudent:hover{
+    background-color: #2887E6;
+    transition: 0.2s;
+}
+
+.boxstudent:hover a{
+    display: block;
+    height: 200px;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.form-control {
+    display: block;
+    width: 525px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+
+
+
+
+
+/* front starts */
+
+
+/* .front, .front:active, .front:visited{
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 25px;
+    width: 220px;
+    height: 200px;
+    margin: 0;
+    border: 1px #fff;
+    border-radius: 10px;
+    box-shadow: 8px 10px 25px -6px rgba(0,0,0,0.62); 
+    -webkit-box-shadow: 8px 10px 25px -6px rgba(0,0,0,0.62);
+    transition: 0.2s;
+}
+
+.front a:front{
+    color: #fff;
+    transition: 0.2s;
+ }
+
+.front:hover{
+    background-color: #2887e6;
+    transition: 0.2s;
+}
+
+.front:hover a{
+    display: block;
+    height: 200px;
+    color: #fff;
+    transition: 0.2s;
+} */
+
+/* front ends */
