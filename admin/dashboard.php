@@ -40,38 +40,27 @@
 	    </a>
       </div>
 
-      <div class="box">
-	    <a href="index.php?page=all-users">
-		   <i class="fa fa-users"></i> <br>
-		   <h5 style="font-size: 18px;">All Admins</h5>	
-	    </a>
-      </div>
+      
 
      
     </div>
 
 	 <div style="display: flex; flex-direction: row; justify-content: space-evenly; padding-top: 50px;" >
 
+	 <div class="box">
+	    <a href="index.php?page=all-users">
+		   <i class="fa fa-users"></i> <br>
+		   <h5 style="font-size: 18px;">All Admins</h5>	
+	    </a>
+      </div>
+
 		<div class="box">
-			<a href="index.php?page=academic">
+			<a href="index.php?page=result">
 				<i class="fas fa-user-graduate"></i> <br>
-				<h5 style="font-size: 18px;">Academic Performance</h5>
+				<h5 style="font-size: 18px;">Result Process</h5>
 			</a>
 		  </div>
 	
-		  <div class="box">
-			<a href="index.php?page=alumni">
-			   <i class="fa fa-users"></i> <br>
-			   <h5 style="font-size: 18px;">Alumni</h5>	
-			</a>
-		  </div>
-
-		  <div class="box">
-			<a href="index.php?page=achievement">
-			   <i class="fa fa-users"></i> <br>
-			   <h5 style="font-size: 18px;">Achievement</h5>	
-			</a>
-		  </div>
 	
 	 </div>
 
