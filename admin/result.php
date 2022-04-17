@@ -9,7 +9,7 @@
     margin-top: 35px;
     transform: translateX(-30px);
     width: 1349px;
-    height: 280px;
+    height: 400px;
     border-radius: 5px;
     background-color: #e9eceffa;
     color: inherit;
@@ -21,8 +21,8 @@
     background-color: #fff;
     font-size: 25px;
     width: 220px;
-    height: 110px;
-    margin: 25px;
+    height: 115px;
+    margin: 20px;
     border: 1px #fff;
     border-radius: 10px;
     box-shadow: 8px 10px 25px -6px rgba(0,0,0,0.62); 
@@ -66,26 +66,64 @@
       <div class="box">
 	    <a href="class-test.php">
       <i class="fas fa-pencil-alt"></i> <br>
-		  <h5 style="font-size: 18px;">Class Test</h5>	
+		  <h5 style="font-size: 18px;">1st Year Odd Semester</h5>	
 	    </a>
       </div>
 
       <div class="box">
 	    <a href="semester-final.php">
-      <i class="fas fa-pencil-ruler"></i> <br>
-		  <h5 style="font-size: 18px;">Semester Final</h5>	
+        <i class="fas fa-pencil-alt"></i> <br>
+		  <h5 style="font-size: 18px;">1st Year Even Semester</h5>	
 	    </a>
       </div>
 
 	  <div class="box">
 	    <a href="attendance.php">
-      <i class="far fa-address-card"></i> <br>
-		  <h5 style="font-size: 18px;">Attendance</h5>	
+        <i class="fas fa-pencil-alt"></i> <br>
+		  <h5 style="font-size: 18px;">2nd Year Odd Semester</h5>	
 	    </a>
       </div>
   
-     
-  </div>
+	  <div class="box">
+	    <a href="attendance.php">
+        <i class="fas fa-pencil-alt"></i> <br>
+		  <h5 style="font-size: 18px;">2nd Year Even Semester</h5>	
+	    </a>
+      </div>
+  
+    </div>
+
+	 <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+
+      <div class="box">
+	    <a href="class-test.php">
+        <i class="fas fa-pencil-alt"></i> <br>
+		  <h5 style="font-size: 18px;">3rd Year Odd Semester</h5>	
+	    </a>
+      </div>
+
+      <div class="box">
+	    <a href="semester-final.php">
+        <i class="fas fa-pencil-alt"></i> <br>
+		  <h5 style="font-size: 18px;">3rd Year Even Semester</h5>	
+	    </a>
+      </div>
+
+	  <div class="box">
+	    <a href="attendance.php">
+        <i class="fas fa-pencil-alt"></i> <br>
+		  <h5 style="font-size: 18px;">4th Year Odd Semester</h5>	
+	    </a>
+      </div>
+  
+	  <div class="box">
+	    <a href="attendance.php">
+        <i class="fas fa-pencil-alt"></i> <br>
+		  <h5 style="font-size: 18px;">4th Year Even Semester</h5>	
+	    </a>
+      </div>
+  
+    </div>
 
 	 
 
