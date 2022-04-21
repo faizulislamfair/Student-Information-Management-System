@@ -8,15 +8,13 @@ if(!isset($_SESSION['user_login'])){
 
 ?>
 
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../fonts/fontawesome-free-5.13.0-web/fontawesome-free-5.13.0-web/css/all.min.css">
@@ -31,33 +29,9 @@ if(!isset($_SESSION['user_login'])){
 <script type="text/javascript" src="../js/script.js"></script>
 
 
-
   <style>
-      .container .jumbotron, .container-fluid .jumbotron {
-    margin-top: 35px;
-    transform: translateX(-30px);
-    width: 1349px;
-    height: 325px;
-    border-radius: 5px;
-    background-color: #e9eceffa;
-    color: inherit;
-}
-
-.boxed{
-    padding: 20px;
-    text-align: center;
-    background-color: #fff;
-    font-size: 25px;
-    width: 200px;
-    height: 200px;
-    margin: 25px;
-    border: 1px #fff;
-    border-radius: 10px;
-    box-shadow: 8px 10px 25px -6px rgba(0,0,0,0.62); 
-    -webkit-box-shadow: 8px 10px 25px -6px rgba(0,0,0,0.62);
-}
-
-.btn-primary, .btn-primary:active, .btn-primary:visited{
+    .btn-primary, .btn-primary:active, .btn-primary:visited{
+    width: 60px;
     background-color: #2155c5;
     color: white;
     border-radius: 15px;
@@ -66,11 +40,11 @@ if(!isset($_SESSION['user_login'])){
     font-weight: 450;
     padding-left: 15px;
     padding-right: 15px;
-    width: 80px;
     height: 32px;
 }
 
 .btn:hover, .btn-info:hover, .btn-primary:hover {
+    width: 75px;
     background-color: #E5E4E3;
     color:#2155c5;
     border-radius: 15px;
@@ -79,30 +53,37 @@ if(!isset($_SESSION['user_login'])){
     padding-right: 20px;
     transition: 0.2s;
     font-weight: 450;
-    width: 110px;
-    height: 32px;
+    height:32px;
 }
 
-/* .box a:hover{
-    color: #fff;
-    transition: 0.2s;
- } */
-
-/* .box:hover{
-    background-color: #2887e6;
-    transition: 0.2s;
-} */
-
-/* .box:hover a{
+.form-control {
     display: block;
-    height: 100px;
-    color: #fff;
-    transition: 0.2s;
-} */
+    width: 150px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
 
-    </style>  
+  </style>
+
+  <title>Class Test Archive</title>
 </head>
 <body>
+
 <nav style="height:80px; padding-top:15px;" class="navbar navbar-default">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -131,53 +112,114 @@ if(!isset($_SESSION['user_login'])){
         </nav>
 
 
-<h1 class="text-primary text-center"><i class="fas fa-user-graduate"></i> Class Test Archive</h1>
+ 
    
-<a href="index.php?page=academic"><button style="margin-left:1080px; transform:translateY(-55px);" class="btn btn-primary">Back</button></a>
+<?php
 
-<div class="jumbotron jumbotron-fluid">
+if(isset($_POST['ct1insert'])){
 
- <div class="container">
+  $roll = $_POST['Roll'];
+  $elec = $_POST['Electrical_Machines'];
+  $data = $_POST['Data_Structure_&_Algorithms'];
+  $tech = $_POST['Digital_Techniques'];
+  $math = $_POST['Mathematics'];
+  $chem = $_POST['Chemistry'];
+  
+  $query = "INSERT INTO `student_marks1`(`Roll`, `Electrical_Machines`, `Data_Structure_&_Algorithms`, `Digital_Techniques`, `Mathematics`, `Chemistry`) VALUES ('$roll', '$elec', '$data', '$tech', '$math', '$chem')";
 
-   <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+  $result = mysqli_query($link, $query);
 
-   <div class="boxed">
-     <h3>CT - 1</h3>
-	    <a href="ct1insert.php" style="margin-top:15px;" class="btn btn-primary offset-2">Insert</a> <br>
-	    <a href="ct1display.php" style="margin-top:15px;" class="btn btn-primary offset-2">Display</a> 
-	    </a>
-   </div>
-   <div class="boxed">
-     <h3>CT - 2</h3>
-	    <a href="ct2insert.php" style="margin-top:15px;" class="btn btn-primary offset-2">Insert</a> <br>
-	    <a href="ct2display.php" style="margin-top:15px;" class="btn btn-primary offset-2">Display</a> 
-	    </a>
-   </div>
-   <div class="boxed">
-     <h3>CT - 3</h3>
-	    <a href="ct3insert.php" style="margin-top:15px;" class="btn btn-primary offset-2">Insert</a> <br>
-	    <a href="ct3display.php" style="margin-top:15px;"  class="btn btn-primary offset-2">Display</a> 
-	    </a>
-   </div>
-   <div class="boxed">
-     <h3>CT - 4</h3>
-	    <a href="ct4insert.php" style="margin-top:15px;" class="btn btn-primary offset-2">Insert</a> <br>
-	    <a href="ct4display.php" style="margin-top:15px;"  class="btn btn-primary offset-2">Display</a> 
-	    </a>
-   </div>
+  if($result){
+   $success = "Data Insertion Successful!";
+   header('location: ct1insert.php'); 
+  } else {
+    $error = "Wrong!";
+  }
 
-   </div>
+}
 
- </div>
+
+?>
+
+<div class="row">
+
+   <?php if(isset($success)){ echo '<p class="alert alert-success col-sm-6">'.$success.'</p>';} ?>
+   <?php if(isset($error)){ echo '<p class="alert alert-danger col-sm-6">'.$error.'</p>'; } ?>
 
 </div>
 
-<footer class="footer-area">
+<div style="margin-top:35px;" class="jumbotron jumbotron-fluid">
+
+ <div class="container">
+
+<div style="margin-left: 75px; margin-top:25px;" class="row">
+   <div class="col-sm-6 ">
+     <form action="" method="POST" enctype="multipart/form-data">
+
+        <table class="table table-striped offset-4">
+  <thead>
+    <tr>
+      <th scope="col">
+      <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="Roll">Roll No.</label>
+      </th>
+      <th scope="col">
+      <label style="font-size:18px; font-weight:550; transform:translateY(-5px);"  for="Electrical_Machines">Electrical Machines</label>
+      </th>
+      <th scope="col">
+      <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="Data_Structure_&_Algorithms">Data Structure & Algorithms</label>
+      </th>
+      <th scope="col">
+      <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="Digital_Techniques">Digital Techniques</label>
+      </th>
+      <th scope="col">
+      <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="Mathematics">Mathematics</label>
+      </th>
+      <th scope="col">
+      <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="Chemistry">Chemistry</label>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+          <input type="text" name="Roll" placeholder="Roll" id="Roll" class="form-control" required="" >
+      </td>
+      <td>
+          <input type="text" name="Electrical Machines" placeholder="Electrical Machines" id="Electrical Machines" class="form-control" required="" >
+      </td>
+      <td>
+          <input type="text" name="Data Structure & Algorithms" placeholder="Data Structure & Algorithms" id="Data Structure & Algorithms" class="form-control" required="" >
+      </td>
+      <td>
+          <input type="text" name="Digital Techniques" placeholder="Digital Techniques" id="Digital Techniques" class="form-control" required="" >
+      </td>
+      <td>
+          <input type="text" name="Mathematics" placeholder="Mathematics" id="Mathematics" class="form-control" required="" >
+      </td>
+      <td>
+          <input type="text" name="Chemistry" placeholder="Chemistry" id="Chemistry" class="form-control" required="" >
+      </td>
+    </tr>
+  </tbody>
+</table>
+        <div style="margin-top:15px;" class="form-group">
+          <input style="height:32px;" type="submit" value="Add" name="ct1insert" class="btn btn-primary">
+        </div>
+     </form>
+   </div>
+</div>
+
+
+</div>
+
+
+</div>
+<!-- -->
+<a href="class-test.php"><button style="margin-left:1080px; transform: translateY(-125px);" class="btn btn-primary">Back</button></a>
+
+<footer style="margin-top:80px;" class="footer-area">
 			<p>Copyright &COPY; 2021 S.M. Faizul Islam Fair</p>
 		</footer>
 
-
 </body>
 </html>
-
-
