@@ -78,7 +78,7 @@
       </div>
 
 	  <div class="box">
-	    <a href="class-test.php">
+	    <a href="21.php">
         <i class="fas fa-pencil-alt"></i> <br>
 		  <h5 style="font-size: 18px;">2nd Year Odd Semester</h5>	
 	    </a>
