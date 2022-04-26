@@ -78,6 +78,10 @@ if(!isset($_SESSION['user_login'])){
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
 }
 
+td > input {
+   text-align: center;
+}
+
   </style>
 
   <title>Class Test Archive</title>
@@ -116,16 +120,64 @@ if(!isset($_SESSION['user_login'])){
    
 <?php
 
-if(isset($_POST['ct1insert'])){
+if(isset($_POST['semester_21insert'])){
 
-  $roll = $_POST['Roll'];
-  $elec = $_POST['Electrical_Machines'];
-  $data = $_POST['Data_Structure_&_Algorithms'];
-  $tech = $_POST['Digital_Techniques'];
-  $math = $_POST['Mathematics'];
-  $chem = $_POST['Chemistry'];
+  $roll = $_POST['roll'];
+
+
+  $ece_2103_ct1 = $_POST['ece_2103_ct1'];
+  $ece_2103_ct2 = $_POST['ece_2103_ct2'];
+  $ece_2103_ct3 = $_POST['ece_2103_ct3'];
+  $ece_2103_ct4 = $_POST['ece_2103_ct4'];
+  $ece_2103_att = $_POST['ece_2103_att'];
+  $ece_2103_exam = $_POST['ece_2103_exam'];
+  $ece_2107_ct1 = $_POST['ece_2107_ct1'];
+  $ece_2107_ct2 = $_POST['ece_2107_ct2'];
+  $ece_2107_ct3 = $_POST['ece_2107_ct3'];
+  $ece_2107_ct4 = $_POST['ece_2107_ct4'];
+  $ece_2107_att = $_POST['ece_2107_att'];
+  $ece_2107_exam = $_POST['ece_2107_exam'];
+  $ece_2111_ct1 = $_POST['ece_2111_ct1'];
+  $ece_2111_ct2 = $_POST['ece_2111_ct2'];
+  $ece_2111_ct3 = $_POST['ece_2111_ct3'];
+  $ece_2111_ct4 = $_POST['ece_2111_ct4'];
+  $ece_2111_att = $_POST['ece_2111_att'];
+  $ece_2111_exam = $_POST['ece_2111_exam'];
+  $math_2117_ct1 = $_POST['math_2117_ct1'];
+  $math_2117_ct2 = $_POST['math_2117_ct2'];
+  $math_2117_ct3 = $_POST['math_2117_ct3'];
+  $math_2117_ct4 = $_POST['math_2117_ct4'];
+  $math_2117_att = $_POST['math_2117_att'];
+  $math_2117_exam = $_POST['math_2117_exam'];
+  $chem_2117_ct1 = $_POST['chem_2117_ct1'];
+  $chem_2117_ct2 = $_POST['chem_2117_ct2'];
+  $chem_2117_ct3 = $_POST['chem_2117_ct3'];
+  $chem_2117_ct4 = $_POST['chem_2117_ct4'];
+  $chem_2117_att = $_POST['chem_2117_att'];
+  $chem_2117_exam = $_POST['chem_2117_exam'];
   
-  $query = "INSERT INTO `student_marks1`(`Roll`, `Electrical_Machines`, `Data_Structure_&_Algorithms`, `Digital_Techniques`, `Mathematics`, `Chemistry`) VALUES ('$roll', '$elec', '$data', '$tech', '$math', '$chem')";
+
+  $ece_2104_re = $_POST['ece_2104_re'];
+  $ece_2104_att = $_POST['ece_2104_att'];
+  $ece_2104_lf = $_POST['ece_2104_lf'];
+  $ece_2104_bv = $_POST['ece_2104_bv'];
+  $ece_2108_re = $_POST['ece_2108_re'];
+  $ece_2108_att = $_POST['ece_2108_att'];
+  $ece_2108_lf = $_POST['ece_2108_lf'];
+  $ece_2108_bv = $_POST['ece_2108_bv'];
+  $chem_2118_re = $_POST['chem_2118_re'];
+  $chem_2118_att = $_POST['chem_2118_att'];
+  $chem_2118_lf = $_POST['chem_2118_lf'];
+  $chem_2118_bv = $_POST['chem_2118_bv'];
+  
+
+  $ece_2100_score = $_POST['ece_2103_score'];
+ 
+  
+  $query = "INSERT INTO `semester_21`(`roll`, `ece_2103_ct1`, `ece_2103_ct2`, `ece_2103_ct3`, `ece_2103_ct4`, `ece_2103_att`, `ece_2103_exam`, `ece_2107_ct1`, `ece_2107_ct2`, `ece_2107_ct3`, `ece_2107_ct4`, `ece_2107_att`, `ece_2107_exam`, `ece_2111_ct1`, `ece_2111_ct2`, `ece_2111_ct3`, `ece_2111_ct4`, `ece_2111_att`, `ece_2111_exam`, `math_2117_ct1`, `math_2117_ct2`, `math_2117_ct3`, `math_2117_ct4`, `math_2117_att`, `math_2117_exam`, `chem_2117_ct1`, `chem_2117_ct2`, `chem_2117_ct3`, `chem_2117_ct4`, `chem_2117_att`, `chem_2117_exam`, `ece_2104_re`, `ece_2104_att`, `ece_2104_lf`, `ece_2104_bv`, `ece_2108_re`, `ece_2108_att`, `ece_2108_lf`, `ece_2108_bv`, `chem_2118_re`, `chem_2118_att`, `chem_2118_lf`, `chem_2118_bv`, `ece_2100_score`) VALUES ('$roll', '$ece_2103_ct1', '$ece_2103_ct2', '$ece_2103_ct3', '$ece_2103_ct4', '$ece_2103_att', '$ece_2103_exam', '$ece_2107_ct1', '$ece_2107_ct2', '$ece_2107_ct3', '$ece_2107_ct4', '$ece_2107_att', '$ece_2107_exam', '$ece_2111_ct1', '$ece_2111_ct2', '$ece_2111_ct3', '$ece_2111_ct4', '$ece_2111_att', '$ece_2111_exam', '$math_2117_ct', '$math_2117_ct2', '$math_2117_ct3', '$math_2117_ct4', '$math_2117_att', '$math_2117_exam', '$chem_2117_ct1', '$chem_2117_ct2', '$chem_2117_ct3', '$chem_2117_ct4', '$chem_2117_att', '$chem_2117_exam', '$ece_2104_re', '$ece_2104_att', '$ece_2104_lf', '$ece_2104_bv', '$ece_2108_re', '$ece_2108_att', '$ece_2108_lf', '$ece_2108_bv', '$chem_2118_re', '$chem_2118_att', '$chem_2118_lf', '$chem_2118_bv', '$ece_2100_score')";
+
+
+
 
   $result = mysqli_query($link, $query);
 
@@ -173,7 +225,7 @@ if(isset($_POST['ct1insert'])){
           <tbody>
               <tr>
               <td>
-               <input type="text" name="Roll" placeholder="Roll No." id="Roll" class="form-control" required="" >
+               <input type="text" name="roll" placeholder="Roll No."  class="form-control" required="" >
                </td>
               </tr>
           </tbody>
@@ -192,142 +244,142 @@ if(isset($_POST['ct1insert'])){
           <thead>
             <tr>
                <th scope="col">
-               <label style="font-size:18px; font-weight:550; transform:translateY(-5px); margin-top:25px;"  for="Electrical_Machines">Course No.</label>
+               <label style="font-size:18px; font-weight:550; transform:translateY(-5px); margin-top:25px;"  for="">Course No.</label>
                </th>
                <th scope="col">
-               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="Data_Structure_&_Algorithms">CT-1</label>
+               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="">CT-1</label>
                </th>
                <th scope="col">
-               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="Data_Structure_&_Algorithms">CT-2</label>
+               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="">CT-2</label>
                </th>
                <th scope="col">
-               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="Data_Structure_&_Algorithms">CT-3</label>
+               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="">CT-3</label>
                </th>
                <th scope="col">
-               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="Data_Structure_&_Algorithms">CT-4</label>
+               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="">CT-4</label>
                </th>
                <th scope="col">
-               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="Digital_Techniques">Attendance</label>
+               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="">Attendance</label>
                </th>
                <th scope="col">
-               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="Mathematics">Exam</label>
+               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="">Exam</label>
                </th>
             </tr>
           </thead>
           <tbody>
             <tr>
                <td>
-               <input type="text" name="Electrical Machines" placeholder="ECE 2103" id="Electrical Machines" class="form-control" required="" >
+               <label type="text" name="" placeholder="ECE 2103" class="form-control">ECE 2103</label>
                </td>
                <td>
-               <input type="text" name="Data Structure & Algorithms" placeholder="CT-1" id="Data Structure & Algorithms" class="form-control" required="" >
+               <input type="text" name="ece_2103_ct1" placeholder="CT-1"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Digital Techniques" placeholder="CT-2" id="Digital Techniques" class="form-control" required="" >
+               <input type="text" name="ece_2103_ct2" placeholder="CT-2"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Mathematics" placeholder="CT-3" id="Mathematics" class="form-control" required="" >
+               <input type="text" name="ece_2103_ct3" placeholder="CT-3"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Data Structure & Algorithms" placeholder="CT-4" id="Data Structure & Algorithms" class="form-control" required="" >
+               <input type="text" name="ece_2103_ct4" placeholder="CT-4"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Digital Techniques" placeholder="Attendance" id="Digital Techniques" class="form-control" required="" >
+               <input type="text" name="ece_2103_att" placeholder="Attendance"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Mathematics" placeholder="Exam" id="Mathematics" class="form-control" required="" >
-               </td>
-            </tr>
-            <tr>
-               <td>
-               <input type="text" name="Electrical Machines" placeholder="ECE 2107" id="Electrical Machines" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Data Structure & Algorithms" placeholder="CT-1" id="Data Structure & Algorithms" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Digital Techniques" placeholder="CT-2" id="Digital Techniques" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Mathematics" placeholder="CT-3" id="Mathematics" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Data Structure & Algorithms" placeholder="CT-4" id="Data Structure & Algorithms" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Digital Techniques" placeholder="Attendance" id="Digital Techniques" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Mathematics" placeholder="Exam" id="Mathematics" class="form-control" required="" >
+               <input type="text" name="ece_2103_exam" placeholder="Exam" class="form-control" required="" >
                </td>
             </tr>
             <tr>
                <td>
-               <input type="text" name="Electrical Machines" placeholder="ECE 2111" id="Electrical Machines" class="form-control" required="" >
+               <label type="text" name=" " placeholder="ECE 2107"  class="form-control">ECE 2107</label>
                </td>
                <td>
-               <input type="text" name="Data Structure & Algorithms" placeholder="CT-1" id="Data Structure & Algorithms" class="form-control" required="" >
+               <input type="text" name="ece_2107_ct1" placeholder="CT-1"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Digital Techniques" placeholder="CT-2" id="Digital Techniques" class="form-control" required="" >
+               <input type="text" name="ece_2107_ct2" placeholder="CT-2"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Mathematics" placeholder="CT-3" id="Mathematics" class="form-control" required="" >
+               <input type="text" name="ece_2107_ct3" placeholder="CT-3"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Data Structure & Algorithms" placeholder="CT-4" id="Data Structure & Algorithms" class="form-control" required="" >
+               <input type="text" name="ece_2107_ct4" placeholder="CT-4"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Digital Techniques" placeholder="Attendance" id="Digital Techniques" class="form-control" required="" >
+               <input type="text" name="ece_2107_att" placeholder="Attendance"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Mathematics" placeholder="Exam" id="Mathematics" class="form-control" required="" >
-               </td>
-            </tr>
-            <tr>
-               <td>
-               <input type="text" name="Electrical Machines" placeholder="Math 21017" id="Electrical Machines" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Data Structure & Algorithms" placeholder="CT-1" id="Data Structure & Algorithms" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Digital Techniques" placeholder="CT-2" id="Digital Techniques" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Mathematics" placeholder="CT-3" id="Mathematics" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Data Structure & Algorithms" placeholder="CT-4" id="Data Structure & Algorithms" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Digital Techniques" placeholder="Attendance" id="Digital Techniques" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Mathematics" placeholder="Exam" id="Mathematics" class="form-control" required="" >
+               <input type="text" name="ece_2107_exam" placeholder="Exam"  class="form-control" required="" >
                </td>
             </tr>
             <tr>
                <td>
-               <input type="text" name="Electrical Machines" placeholder="Chem 2117" id="Electrical Machines" class="form-control" required="" >
+               <label type="text" name=" " placeholder="ECE 2111"  class="form-control">ECE 2111</label>
                </td>
                <td>
-               <input type="text" name="Data Structure & Algorithms" placeholder="CT-1" id="Data Structure & Algorithms" class="form-control" required="" >
+               <input type="text" name="ece_2111_ct1" placeholder="CT-1"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Digital Techniques" placeholder="CT-2" id="Digital Techniques" class="form-control" required="" >
+               <input type="text" name="ece_2111_ct2" placeholder="CT-2"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Mathematics" placeholder="CT-3" id="Mathematics" class="form-control" required="" >
+               <input type="text" name="ece_2111_ct3" placeholder="CT-3" class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Data Structure & Algorithms" placeholder="CT-4" id="Data Structure & Algorithms" class="form-control" required="" >
+               <input type="text" name="ece_2111_ct4" placeholder="CT-4" class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Digital Techniques" placeholder="Attendance" id="Digital Techniques" class="form-control" required="" >
+               <input type="text" name="ece_2111_att" placeholder="Attendance" class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Mathematics" placeholder="Exam" id="Mathematics" class="form-control" required="" >
+               <input type="text" name="ece_2111_exam" placeholder="Exam" class="form-control" required="" >
+               </td>
+            </tr>
+            <tr>
+               <th>
+               <label type="text" name=" " placeholder="Math 2117"  class="form-control">Math 2117</label>
+               </th>
+               <td>
+               <input type="text" name="math_2117_ct1"  placeholder="CT-1"  class="form-control" required="" >
+               </td>
+               <td>
+               <input type="text" name="math_2117_ct2" placeholder="CT-2"  class="form-control" required="" >
+               </td>
+               <td>
+               <input type="text" name="math_2117_ct3" placeholder="CT-3" class="form-control" required="" >
+               </td>
+               <td>
+               <input type="text" name="math_2117_ct4" placeholder="CT-4" class="form-control" required="" >
+               </td>
+               <td>
+               <input type="text" name="math_2117_att" placeholder="Attendance"  class="form-control" required="" >
+               </td>
+               <td>
+               <input type="text" name="math_2117_exam" placeholder="Exam" class="form-control" required="" >
+               </td>
+            </tr>
+            <tr>
+               <td>
+               <label type="text" name=" " placeholder="Chem 2117" class="form-control">Chem 2117</label>
+               </td>
+               <td>
+               <input type="text" name="chem_2117_ct1" placeholder="CT-1" class="form-control" required="" >
+               </td>
+               <td>
+               <input type="text" name="chem_2117_ct2" placeholder="CT-2" class="form-control" required="" >
+               </td>
+               <td>
+               <input type="text" name="chem_2117_ct3" placeholder="CT-3" class="form-control" required="" >
+               </td>
+               <td>
+               <input type="text" name="chem_2117_ct4" placeholder="CT-4" class="form-control" required="" >
+               </td>
+               <td>
+               <input type="text" name="chem_2117_att" placeholder="Attendance" class="form-control" required="" >
+               </td>
+               <td>
+               <input type="text" name="chem_2117_exam" placeholder="Exam" class="form-control" required="" >
                </td>
             </tr>
             
@@ -339,74 +391,74 @@ if(isset($_POST['ct1insert'])){
           <thead>
             <tr>
                <th scope="col">
-               <label style="font-size:18px; font-weight:550; transform:translateY(-5px); margin-top:25px;"  for="Electrical_Machines">Lab Courses No.</label>
+               <label style="font-size:18px; font-weight:550; transform:translateY(-5px); margin-top:25px;"  for="">Lab Courses No.</label>
                </th>
                <th scope="col">
-               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);"  for="Electrical_Machines">Report</label>
+               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);"  for="">Report</label>
                </th>
                <th scope="col">
-               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="Data_Structure_&_Algorithms">Attendance</label>
+               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="">Attendance</label>
                </th>
                <th scope="col">
-               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="Digital_Techniques">Lab Final</label>
+               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="">Lab Final</label>
                </th>
                <th scope="col">
-               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="Mathematics">Board Viva</label>
+               <label style="font-size:18px; font-weight:550; transform:translateY(-5px);" for="">Board Viva</label>
                </th>
             </tr>
           </thead>
           <tbody>
             <tr>
                <td>
-               <input type="text" name="Electrical Machines" placeholder="ECE 2104" id="Electrical Machines" class="form-control" required="" >
+               <label type="text" name="" placeholder="ECE 2104" class="form-control">ECE 2104</label>
                </td>
                <td>
-               <input type="text" name="Electrical Machines" placeholder="Report" id="Electrical Machines" class="form-control" required="" >
+               <input type="text" name="ece_2104_re" placeholder="Report" class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Data Structure & Algorithms" placeholder="Attendance" id="Data Structure & Algorithms" class="form-control" required="" >
+               <input type="text" name="ece_2104_att" placeholder="Attendance" class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Digital Techniques" placeholder="Lab Final" id="Digital Techniques" class="form-control" required="" >
+               <input type="text" name="ece_2104_lf" placeholder="Lab Final"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Mathematics" placeholder="Board Viva" id="Mathematics" class="form-control" required="" >
-               </td>
-            </tr>
-            
-            <tr>
-               <td>
-               <input type="text" name="Electrical Machines" placeholder="ECE 2108" id="Electrical Machines" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Electrical Machines" placeholder="Report" id="Electrical Machines" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Data Structure & Algorithms" placeholder="Attendance" id="Data Structure & Algorithms" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Digital Techniques" placeholder="Lab Final" id="Digital Techniques" class="form-control" required="" >
-               </td>
-               <td>
-               <input type="text" name="Mathematics" placeholder="Board Viva" id="Mathematics" class="form-control" required="" >
+               <input type="text" name="ece_2104_bv" placeholder="Board Viva" class="form-control" required="" >
                </td>
             </tr>
             
             <tr>
                <td>
-               <input type="text" name="Electrical Machines" placeholder="Chem 2118" id="Electrical Machines" class="form-control" required="" >
+               <label type="text" name=" " placeholder="ECE 2108" class="form-control">ECE 2108</label>
                </td>
                <td>
-               <input type="text" name="Electrical Machines" placeholder="Report" id="Electrical Machines" class="form-control" required="" >
+               <input type="text" name="ece_2108_re" placeholder="Report"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Data Structure & Algorithms" placeholder="Attendance" id="Data Structure & Algorithms" class="form-control" required="" >
+               <input type="text" name="ece_2108_att" placeholder="Attendance"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Digital Techniques" placeholder="Lab Final" id="Digital Techniques" class="form-control" required="" >
+               <input type="text" name="ece_2108_lf" placeholder="Lab Final"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="Mathematics" placeholder="Board Viva" id="Mathematics" class="form-control" required="" >
+               <input type="text" name="ece_2108_bv" placeholder="Board Viva" class="form-control" required="" >
+               </td>
+            </tr>
+            
+            <tr>
+               <td>
+               <label type="text" name=" " placeholder="Chem 2118"  class="form-control">Chem 2118</label>
+               </td>
+               <td>
+               <input type="text" name="chem_2118_re" placeholder="Report" class="form-control" required="" >
+               </td>
+               <td>
+               <input type="text" name="chem_2118_att" placeholder="Attendance" class="form-control" required="" >
+               </td>
+               <td>
+               <input type="text" name="chem_2118_lf" placeholder="Lab Final"  class="form-control" required="" >
+               </td>
+               <td>
+               <input type="text" name="chem_2118_bv" placeholder="Board Viva"  class="form-control" required="" >
                </td>
             </tr>
             
@@ -433,11 +485,11 @@ if(isset($_POST['ct1insert'])){
               <tr>
 
               <td>
-               <input type="text" name="Roll" placeholder="ECE 2100" id="Roll" class="form-control" required="" >
+               <label type="text" name="" placeholder="ECE 2100"  class="form-control">ECE 2100</label>
                </td>
 
               <td>
-               <input type="text" name="Roll" placeholder="Score" id="Roll" class="form-control" required="" >
+               <input type="text" name="ece_2100_score" placeholder="Score"  class="form-control" required="" >
                </td>
 
               </tr>
@@ -447,7 +499,7 @@ if(isset($_POST['ct1insert'])){
         </table>
 
         <div style="margin-top:20px; margin-bottom:35px;" class="form-group">
-          <input style="height:32px;" type="submit" value="Submit" name="ct1insert" class="btn btn-primary">
+          <input style="height:32px;" type="submit" value="Submit" name="semester_21insert" class="btn btn-primary">
         </div>
         
      </form>

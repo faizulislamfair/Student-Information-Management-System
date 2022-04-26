@@ -54,14 +54,20 @@
 	    </a>
       </div>
 
-		<div class="box">
+	 <div class="box">
 			<a href="index.php?page=result">
 				<i class="fas fa-user-graduate"></i> <br>
 				<h5 style="font-size: 18px;">Result Process</h5>
 			</a>
-		  </div>
-	
-	
+	 </div>
+
+	 <div class="box">
+			<a href="index.php?page=resultdisp">
+				<i class="fas fa-user-graduate"></i> <br>
+				<h5 style="font-size: 18px;">Result</h5>
+			</a>
+	 </div>
+
 	 </div>
 
     </div>
