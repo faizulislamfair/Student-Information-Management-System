@@ -183,7 +183,7 @@ if(isset($_POST['semester_21insert'])){
 
   if($result){
    $success = "Data Insertion Successful!";
-   header('location: ct1insert.php'); 
+   header('location: resultdisp.php'); 
   } else {
     $error = "Wrong!";
   }

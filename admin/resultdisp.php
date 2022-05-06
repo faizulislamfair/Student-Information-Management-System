@@ -11,14 +11,68 @@
             $ct3 = $row['ece_2103_ct3'];
             $ct4 = $row['ece_2103_ct4'];
 
-            echo $ct1;
-            echo '<br>'; 
-            echo $ct2;
-            echo '<br>';
-            echo $ct3;
-            echo '<br>';
-            echo $ct4;
-            echo '<br>';
+            if($ct1==0){
+                $avg = ($ct2+$ct3+$ct4)/3;
+            }
+            else if($ct2==0){
+                $avg = ($ct1+$ct3+$ct4)/3;
+            }
+            else if($ct3==0){
+                $avg = ($ct2+$ct1+$ct4)/3;
+            }
+            else if($ct4==0){
+                $avg = ($ct2+$ct3+$ct1)/3;
+            }
+            else if($ct1==0 && $ct2==0){
+                $avg = ($ct3+$ct4)/3;
+            }
+            else if($ct1==0 && $ct3==0){
+                $avg = ($ct2+$ct4)/3;
+            }
+            else if($ct1==0 && $ct4==0){
+                $avg = ($ct2+$ct3)/3;
+            }
+            else if($ct2==0 && $ct3==0){
+                $avg = ($ct1+$ct4)/3;
+            }
+            else if($ct2==0 && $ct4==0){
+                $avg = ($ct1+$ct3)/3;
+            }
+            else if($ct3==0 && $ct4==0){
+                $avg = ($ct1+$ct2)/3;
+            }
+            else if($ct1==0 && $ct2==0 && $ct3==0){
+                $avg = $ct4/3;
+            }
+            else if($ct1==0 && $ct2==0 && $ct4==0){
+                $avg = $ct3/3;
+            }
+            else if($ct1==0 && $ct3==0 && $ct4==0){
+                $avg = $ct2/3;
+            }
+            else if($ct2==0 && $ct3==0 && $ct4==0){
+                $avg = $ct1/3;
+            }
+            else if($ct1==0 && $ct2==0 && $ct3==0 && $ct4==0){
+                $avg = 0;
+            }
+            else if(($ct1 && $ct2 && $ct3) > $ct4 ){
+                $avg = ($ct1+$ct2+$ct3)/3;
+            }
+            else if(($ct1 && $ct2 && $ct4) > $ct3 ){
+                $avg = ($ct1+$ct2+$ct4)/3;
+            }
+            else if(($ct1 && $ct3 && $ct4) > $ct2 ){
+                $avg = ($ct1+$ct3+$ct4)/3;
+            }
+            else if(($ct2 && $ct3 && $ct4) > $ct1 ){
+                $avg = ($ct2+$ct3+$ct4)/3;
+            }
+            else if($ct1==$ct2 && $ct2==$ct3 && $ct3==$ct4){
+                $avg = ($ct1+$ct2+$ct3)/3;
+            }
+
+            echo $avg;
 
             ?> <br> <br> <br> <br> <br>
             
