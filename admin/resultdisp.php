@@ -10,6 +10,9 @@
             $ct2 = $row['ece_2103_ct2'];
             $ct3 = $row['ece_2103_ct3'];
             $ct4 = $row['ece_2103_ct4'];
+            $att2103 = $row['ece_2103_att'];
+            $exam2103 = $row['ece_2103_exam'];
+
 
             if($ct1==0){
                 $avg = ($ct2+$ct3+$ct4)/3;
@@ -72,7 +75,49 @@
                 $avg = ($ct1+$ct2+$ct3)/3;
             }
 
-            echo $avg;
+            $res2103 = $avg+$att2103+$exam2103;
+
+            echo '<br>';
+
+            echo $res2103;
+
+            echo '<br>';
+
+            if($res2103>=0 && $res2103<=39){
+                $gp2103 = 0.00;
+            }
+            else if($res2103>=40 && $res2103<=44){
+                $gp2103 = 2.00;
+            }
+            else if($res2103>=45 && $res2103<=49){
+                $gp2103 = 2.25;
+            }
+            else if($res2103>=50 && $res2103<=54){
+                $gp2103 = 2.50;
+            }
+            else if($res2103>=55 && $res2103<=59){
+                $gp2103 = 2.75;
+            }
+            else if($res2103>=60 && $res2103<=64){
+                $gp2103 = 3.00;
+            }
+            else if($res2103>=65 && $res2103<=69){
+                $gp2103 = 3.25;
+            }
+            else if($res2103>=70 && $res2103<=74){
+                $gp2103 = 3.50;
+            }
+            else if($res2103>=75 && $res2103<=79){
+                $gp2103 = 3.75;
+            }
+            else if($res2103>=80){
+                $gp2103 = 4.00;
+            }
+
+            echo '<br>';
+
+            echo $gp2103;
+
 
             ?> <br> <br> <br> <br> <br>
             
