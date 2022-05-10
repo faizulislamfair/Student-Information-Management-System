@@ -116,7 +116,7 @@ if(!isset($_SESSION['user_login'])){
    
 <?php
 
-if(isset($_POST['ct1insert'])){
+if(isset($_POST['ct1_2103insert'])){
 
   $roll = $_POST['Roll'];
   $elec = $_POST['Electrical_Machines'];
@@ -131,7 +131,7 @@ if(isset($_POST['ct1insert'])){
 
   if($result){
    $success = "Data Insertion Successful!";
-   header('location: ct1insert.php'); 
+   header('location: ct1_2103insert.php'); 
   } else {
     $error = "Wrong!";
   }
@@ -203,7 +203,7 @@ if(isset($_POST['ct1insert'])){
   </tbody>
 </table>
         <div style="margin-top:15px;" class="form-group">
-          <input style="height:32px;" type="submit" value="Add" name="ct1insert" class="btn btn-primary">
+          <input style="height:32px;" type="submit" value="Add" name="ct1_2103insert" class="btn btn-primary">
         </div>
      </form>
    </div>

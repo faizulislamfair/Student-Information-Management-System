@@ -183,7 +183,7 @@ $db_datas = mysqli_query($link, "SELECT * FROM `student_marks1` WHERE `Roll` = '
 $db_row = mysqli_fetch_assoc($db_datas);
 
 
-if(isset($_POST['ct1update'])){
+if(isset($_POST['ct1_2103update'])){
 
     $roll = $_POST['Roll'];
     $elec = $_POST['Electrical_Machines'];
@@ -198,7 +198,7 @@ if(isset($_POST['ct1update'])){
   
 
   if($result){
-    // header('location: ct1display.php');
+    // header('location: ct1_2103display.php');
   }
 
 }
@@ -266,7 +266,7 @@ if(isset($_POST['ct1update'])){
 </table>
 
 <div style="margin-top:15px; height:35px;" class="form-group">
-          <input type="submit" value="Update" name="ct1update" class="btn btn-primary">
+          <input type="submit" value="Update" name="ct1_2103update" class="btn btn-primary">
         </div>
      </form>
    </div>
@@ -277,7 +277,7 @@ if(isset($_POST['ct1update'])){
 </div>
 
 
-<a href="ct1display.php"><button style="margin-left:1080px; transform: translateY(-125px);" class="btn btn-primary">Back</button></a>
+<a href="ct1_2103display.php"><button style="margin-left:1080px; transform: translateY(-125px);" class="btn btn-primary">Back</button></a>
 
 
 <footer style="margin-top:65px;" class="footer-area">

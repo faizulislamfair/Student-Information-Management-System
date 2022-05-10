@@ -136,22 +136,22 @@ if(!isset($_SESSION['student_login'])){
 
    <div class="boxed">
      <h3>CT - 1</h3>
-	    <a href="ct1display.php" style="margin-top:15px;" class="btn btn-primary offset-2">Display</a> 
+	    <a href="ct1_2103display.php" style="margin-top:15px;" class="btn btn-primary offset-2">Display</a> 
 	    </a>
    </div>
    <div class="boxed">
      <h3>CT - 2</h3>
-	    <a href="ct2display.php" style="margin-top:15px;" class="btn btn-primary offset-2">Display</a> 
+	    <a href="ct2_2103display.php" style="margin-top:15px;" class="btn btn-primary offset-2">Display</a> 
 	    </a>
    </div>
    <div class="boxed">
      <h3>CT - 3</h3>
-	    <a href="ct3display.php" style="margin-top:15px;"  class="btn btn-primary offset-2">Display</a> 
+	    <a href="ct3_2103display.php" style="margin-top:15px;"  class="btn btn-primary offset-2">Display</a> 
 	    </a>
    </div>
    <div class="boxed">
      <h3>CT - 4</h3>
-	    <a href="ct4display.php" style="margin-top:15px;"  class="btn btn-primary offset-2">Display</a> 
+	    <a href="ct4_2103display.php" style="margin-top:15px;"  class="btn btn-primary offset-2">Display</a> 
 	    </a>
    </div>
 

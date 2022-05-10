@@ -125,34 +125,34 @@ if(isset($_POST['semester_21insert'])){
   $roll = $_POST['roll'];
 
 
-  $ece_2103_ct1 = $_POST['ece_2103_ct1'];
-  $ece_2103_ct2 = $_POST['ece_2103_ct2'];
-  $ece_2103_ct3 = $_POST['ece_2103_ct3'];
-  $ece_2103_ct4 = $_POST['ece_2103_ct4'];
+  $ece_2103_ct1_2103 = $_POST['ece_2103_ct1_2103'];
+  $ece_2103_ct2_2103 = $_POST['ece_2103_ct2_2103'];
+  $ece_2103_ct3_2103 = $_POST['ece_2103_ct3_2103'];
+  $ece_2103_ct4_2103 = $_POST['ece_2103_ct4_2103'];
   $ece_2103_att = $_POST['ece_2103_att'];
   $ece_2103_exam = $_POST['ece_2103_exam'];
-  $ece_2107_ct1 = $_POST['ece_2107_ct1'];
-  $ece_2107_ct2 = $_POST['ece_2107_ct2'];
-  $ece_2107_ct3 = $_POST['ece_2107_ct3'];
-  $ece_2107_ct4 = $_POST['ece_2107_ct4'];
+  $ece_2107_ct1_2103 = $_POST['ece_2107_ct1_2103'];
+  $ece_2107_ct2_2103 = $_POST['ece_2107_ct2_2103'];
+  $ece_2107_ct3_2103 = $_POST['ece_2107_ct3_2103'];
+  $ece_2107_ct4_2103 = $_POST['ece_2107_ct4_2103'];
   $ece_2107_att = $_POST['ece_2107_att'];
   $ece_2107_exam = $_POST['ece_2107_exam'];
-  $ece_2111_ct1 = $_POST['ece_2111_ct1'];
-  $ece_2111_ct2 = $_POST['ece_2111_ct2'];
-  $ece_2111_ct3 = $_POST['ece_2111_ct3'];
-  $ece_2111_ct4 = $_POST['ece_2111_ct4'];
+  $ece_2111_ct1_2103 = $_POST['ece_2111_ct1_2103'];
+  $ece_2111_ct2_2103 = $_POST['ece_2111_ct2_2103'];
+  $ece_2111_ct3_2103 = $_POST['ece_2111_ct3_2103'];
+  $ece_2111_ct4_2103 = $_POST['ece_2111_ct4_2103'];
   $ece_2111_att = $_POST['ece_2111_att'];
   $ece_2111_exam = $_POST['ece_2111_exam'];
-  $math_2117_ct1 = $_POST['math_2117_ct1'];
-  $math_2117_ct2 = $_POST['math_2117_ct2'];
-  $math_2117_ct3 = $_POST['math_2117_ct3'];
-  $math_2117_ct4 = $_POST['math_2117_ct4'];
+  $math_2117_ct1_2103 = $_POST['math_2117_ct1_2103'];
+  $math_2117_ct2_2103 = $_POST['math_2117_ct2_2103'];
+  $math_2117_ct3_2103 = $_POST['math_2117_ct3_2103'];
+  $math_2117_ct4_2103 = $_POST['math_2117_ct4_2103'];
   $math_2117_att = $_POST['math_2117_att'];
   $math_2117_exam = $_POST['math_2117_exam'];
-  $chem_2117_ct1 = $_POST['chem_2117_ct1'];
-  $chem_2117_ct2 = $_POST['chem_2117_ct2'];
-  $chem_2117_ct3 = $_POST['chem_2117_ct3'];
-  $chem_2117_ct4 = $_POST['chem_2117_ct4'];
+  $chem_2117_ct1_2103 = $_POST['chem_2117_ct1_2103'];
+  $chem_2117_ct2_2103 = $_POST['chem_2117_ct2_2103'];
+  $chem_2117_ct3_2103 = $_POST['chem_2117_ct3_2103'];
+  $chem_2117_ct4_2103 = $_POST['chem_2117_ct4_2103'];
   $chem_2117_att = $_POST['chem_2117_att'];
   $chem_2117_exam = $_POST['chem_2117_exam'];
   
@@ -174,7 +174,7 @@ if(isset($_POST['semester_21insert'])){
   $ece_2100_score = $_POST['ece_2100_score'];
  
   
-  $query = "INSERT INTO `semester_21`(`roll`, `ece_2103_ct1`, `ece_2103_ct2`, `ece_2103_ct3`, `ece_2103_ct4`, `ece_2103_att`, `ece_2103_exam`, `ece_2107_ct1`, `ece_2107_ct2`, `ece_2107_ct3`, `ece_2107_ct4`, `ece_2107_att`, `ece_2107_exam`, `ece_2111_ct1`, `ece_2111_ct2`, `ece_2111_ct3`, `ece_2111_ct4`, `ece_2111_att`, `ece_2111_exam`, `math_2117_ct1`, `math_2117_ct2`, `math_2117_ct3`, `math_2117_ct4`, `math_2117_att`, `math_2117_exam`, `chem_2117_ct1`, `chem_2117_ct2`, `chem_2117_ct3`, `chem_2117_ct4`, `chem_2117_att`, `chem_2117_exam`, `ece_2104_re`, `ece_2104_att`, `ece_2104_quiz`, `ece_2104_bv`, `ece_2108_re`, `ece_2108_att`, `ece_2108_quiz`, `ece_2108_bv`, `chem_2118_re`, `chem_2118_att`, `chem_2118_quiz`, `chem_2118_bv`, `ece_2100_score`) VALUES ('$roll', '$ece_2103_ct1', '$ece_2103_ct2', '$ece_2103_ct3', '$ece_2103_ct4', '$ece_2103_att', '$ece_2103_exam', '$ece_2107_ct1', '$ece_2107_ct2', '$ece_2107_ct3', '$ece_2107_ct4', '$ece_2107_att', '$ece_2107_exam', '$ece_2111_ct1', '$ece_2111_ct2', '$ece_2111_ct3', '$ece_2111_ct4', '$ece_2111_att', '$ece_2111_exam', '$math_2117_ct1', '$math_2117_ct2', '$math_2117_ct3', '$math_2117_ct4', '$math_2117_att', '$math_2117_exam', '$chem_2117_ct1', '$chem_2117_ct2', '$chem_2117_ct3', '$chem_2117_ct4', '$chem_2117_att', '$chem_2117_exam', '$ece_2104_re', '$ece_2104_att', '$ece_2104_quiz', '$ece_2104_bv', '$ece_2108_re', '$ece_2108_att', '$ece_2108_quiz', '$ece_2108_bv', '$chem_2118_re', '$chem_2118_att', '$chem_2118_quiz', '$chem_2118_bv', '$ece_2100_score')";
+  $query = "INSERT INTO `semester_21`(`roll`, `ece_2103_ct1_2103`, `ece_2103_ct2_2103`, `ece_2103_ct3_2103`, `ece_2103_ct4_2103`, `ece_2103_att`, `ece_2103_exam`, `ece_2107_ct1_2103`, `ece_2107_ct2_2103`, `ece_2107_ct3_2103`, `ece_2107_ct4_2103`, `ece_2107_att`, `ece_2107_exam`, `ece_2111_ct1_2103`, `ece_2111_ct2_2103`, `ece_2111_ct3_2103`, `ece_2111_ct4_2103`, `ece_2111_att`, `ece_2111_exam`, `math_2117_ct1_2103`, `math_2117_ct2_2103`, `math_2117_ct3_2103`, `math_2117_ct4_2103`, `math_2117_att`, `math_2117_exam`, `chem_2117_ct1_2103`, `chem_2117_ct2_2103`, `chem_2117_ct3_2103`, `chem_2117_ct4_2103`, `chem_2117_att`, `chem_2117_exam`, `ece_2104_re`, `ece_2104_att`, `ece_2104_quiz`, `ece_2104_bv`, `ece_2108_re`, `ece_2108_att`, `ece_2108_quiz`, `ece_2108_bv`, `chem_2118_re`, `chem_2118_att`, `chem_2118_quiz`, `chem_2118_bv`, `ece_2100_score`) VALUES ('$roll', '$ece_2103_ct1_2103', '$ece_2103_ct2_2103', '$ece_2103_ct3_2103', '$ece_2103_ct4_2103', '$ece_2103_att', '$ece_2103_exam', '$ece_2107_ct1_2103', '$ece_2107_ct2_2103', '$ece_2107_ct3_2103', '$ece_2107_ct4_2103', '$ece_2107_att', '$ece_2107_exam', '$ece_2111_ct1_2103', '$ece_2111_ct2_2103', '$ece_2111_ct3_2103', '$ece_2111_ct4_2103', '$ece_2111_att', '$ece_2111_exam', '$math_2117_ct1_2103', '$math_2117_ct2_2103', '$math_2117_ct3_2103', '$math_2117_ct4_2103', '$math_2117_att', '$math_2117_exam', '$chem_2117_ct1_2103', '$chem_2117_ct2_2103', '$chem_2117_ct3_2103', '$chem_2117_ct4_2103', '$chem_2117_att', '$chem_2117_exam', '$ece_2104_re', '$ece_2104_att', '$ece_2104_quiz', '$ece_2104_bv', '$ece_2108_re', '$ece_2108_att', '$ece_2108_quiz', '$ece_2108_bv', '$chem_2118_re', '$chem_2118_att', '$chem_2118_quiz', '$chem_2118_bv', '$ece_2100_score')";
 
 
 
@@ -272,16 +272,16 @@ if(isset($_POST['semester_21insert'])){
                <label type="text" name="" placeholder="ECE 2103" class="form-control">ECE 2103</label>
                </td>
                <td>
-               <input type="text" name="ece_2103_ct1" placeholder="CT-1"  class="form-control" required="" >
+               <input type="text" name="ece_2103_ct1_2103" placeholder="CT-1"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="ece_2103_ct2" placeholder="CT-2"  class="form-control" required="" >
+               <input type="text" name="ece_2103_ct2_2103" placeholder="CT-2"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="ece_2103_ct3" placeholder="CT-3"  class="form-control" required="" >
+               <input type="text" name="ece_2103_ct3_2103" placeholder="CT-3"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="ece_2103_ct4" placeholder="CT-4"  class="form-control" required="" >
+               <input type="text" name="ece_2103_ct4_2103" placeholder="CT-4"  class="form-control" required="" >
                </td>
                <td>
                <input type="text" name="ece_2103_att" placeholder="Attendance"  class="form-control" required="" >
@@ -295,16 +295,16 @@ if(isset($_POST['semester_21insert'])){
                <label type="text" name=" " placeholder="ECE 2107"  class="form-control">ECE 2107</label>
                </td>
                <td>
-               <input type="text" name="ece_2107_ct1" placeholder="CT-1"  class="form-control" required="" >
+               <input type="text" name="ece_2107_ct1_2103" placeholder="CT-1"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="ece_2107_ct2" placeholder="CT-2"  class="form-control" required="" >
+               <input type="text" name="ece_2107_ct2_2103" placeholder="CT-2"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="ece_2107_ct3" placeholder="CT-3"  class="form-control" required="" >
+               <input type="text" name="ece_2107_ct3_2103" placeholder="CT-3"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="ece_2107_ct4" placeholder="CT-4"  class="form-control" required="" >
+               <input type="text" name="ece_2107_ct4_2103" placeholder="CT-4"  class="form-control" required="" >
                </td>
                <td>
                <input type="text" name="ece_2107_att" placeholder="Attendance"  class="form-control" required="" >
@@ -318,16 +318,16 @@ if(isset($_POST['semester_21insert'])){
                <label type="text" name=" " placeholder="ECE 2111"  class="form-control">ECE 2111</label>
                </td>
                <td>
-               <input type="text" name="ece_2111_ct1" placeholder="CT-1"  class="form-control" required="" >
+               <input type="text" name="ece_2111_ct1_2103" placeholder="CT-1"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="ece_2111_ct2" placeholder="CT-2"  class="form-control" required="" >
+               <input type="text" name="ece_2111_ct2_2103" placeholder="CT-2"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="ece_2111_ct3" placeholder="CT-3" class="form-control" required="" >
+               <input type="text" name="ece_2111_ct3_2103" placeholder="CT-3" class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="ece_2111_ct4" placeholder="CT-4" class="form-control" required="" >
+               <input type="text" name="ece_2111_ct4_2103" placeholder="CT-4" class="form-control" required="" >
                </td>
                <td>
                <input type="text" name="ece_2111_att" placeholder="Attendance" class="form-control" required="" >
@@ -341,16 +341,16 @@ if(isset($_POST['semester_21insert'])){
                <label type="text" name=" " placeholder="Math 2117"  class="form-control">Math 2117</label>
                </th>
                <td>
-               <input type="text" name="math_2117_ct1"  placeholder="CT-1"  class="form-control" required="" >
+               <input type="text" name="math_2117_ct1_2103"  placeholder="CT-1"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="math_2117_ct2" placeholder="CT-2"  class="form-control" required="" >
+               <input type="text" name="math_2117_ct2_2103" placeholder="CT-2"  class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="math_2117_ct3" placeholder="CT-3" class="form-control" required="" >
+               <input type="text" name="math_2117_ct3_2103" placeholder="CT-3" class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="math_2117_ct4" placeholder="CT-4" class="form-control" required="" >
+               <input type="text" name="math_2117_ct4_2103" placeholder="CT-4" class="form-control" required="" >
                </td>
                <td>
                <input type="text" name="math_2117_att" placeholder="Attendance"  class="form-control" required="" >
@@ -364,16 +364,16 @@ if(isset($_POST['semester_21insert'])){
                <label type="text" name=" " placeholder="Chem 2117" class="form-control">Chem 2117</label>
                </td>
                <td>
-               <input type="text" name="chem_2117_ct1" placeholder="CT-1" class="form-control" required="" >
+               <input type="text" name="chem_2117_ct1_2103" placeholder="CT-1" class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="chem_2117_ct2" placeholder="CT-2" class="form-control" required="" >
+               <input type="text" name="chem_2117_ct2_2103" placeholder="CT-2" class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="chem_2117_ct3" placeholder="CT-3" class="form-control" required="" >
+               <input type="text" name="chem_2117_ct3_2103" placeholder="CT-3" class="form-control" required="" >
                </td>
                <td>
-               <input type="text" name="chem_2117_ct4" placeholder="CT-4" class="form-control" required="" >
+               <input type="text" name="chem_2117_ct4_2103" placeholder="CT-4" class="form-control" required="" >
                </td>
                <td>
                <input type="text" name="chem_2117_att" placeholder="Attendance" class="form-control" required="" >

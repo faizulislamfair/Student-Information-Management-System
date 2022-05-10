@@ -187,7 +187,7 @@ if(!isset($_SESSION['user_login'])){
     <td><?php echo $row['Chemistry'] . ($chem_highest == $row['Chemistry'] ? "( Highest )" : "" ) . (($chem_lowest == $row['Chemistry'] && $chem_lowest!=$chem_highest) ? "( Lowest )" : "" );  ?></td>
 
     <td>
-       <a href="ct1update.php?page=update-student&Roll=<?php echo base64_encode($row['Roll']); ?>" class="btn-xs btn-warning"><i class="fa fa-pencil"></i> Edit</a>
+       <a href="ct1_2103update.php?page=update-student&Roll=<?php echo base64_encode($row['Roll']); ?>" class="btn-xs btn-warning"><i class="fa fa-pencil"></i> Edit</a>
     </td>
   </tr>
 
