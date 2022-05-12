@@ -16,7 +16,7 @@ require './dbcon.php';
 
             // theory ece 2103 starts
 
-            $ct1_2103 = $row['ece_2103_ct1'];
+            $ct1_2103 = $row['ece_2103_ct1'];  
             $ct2_2103 = $row['ece_2103_ct2'];
             $ct3_2103 = $row['ece_2103_ct3'];
             $ct4_2103 = $row['ece_2103_ct4'];

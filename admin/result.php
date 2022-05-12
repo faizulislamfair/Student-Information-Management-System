@@ -64,14 +64,14 @@
 	 <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
 
       <div class="box">
-	    <a href="class-test.php">
+	    <a href="11.php">
       <i class="fas fa-pencil-alt"></i> <br>
 		  <h5 style="font-size: 18px;">1st Year Odd Semester</h5>	
 	    </a>
       </div>
 
       <div class="box">
-	    <a href="semester-final.php">
+	    <a href="12.php">
         <i class="fas fa-pencil-alt"></i> <br>
 		  <h5 style="font-size: 18px;">1st Year Even Semester</h5>	
 	    </a>
