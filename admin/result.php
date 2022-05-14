@@ -85,7 +85,7 @@
       </div>
   
 	  <div class="box">
-	    <a href="attendance.php">
+	    <a href="22.php">
         <i class="fas fa-pencil-alt"></i> <br>
 		  <h5 style="font-size: 18px;">2nd Year Even Semester</h5>	
 	    </a>
@@ -96,7 +96,7 @@
 	 <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
 
       <div class="box">
-	    <a href="class-test.php">
+	    <a href="31.php">
         <i class="fas fa-pencil-alt"></i> <br>
 		  <h5 style="font-size: 18px;">3rd Year Odd Semester</h5>	
 	    </a>
