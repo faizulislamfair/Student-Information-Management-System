@@ -103,21 +103,21 @@
       </div>
 
       <div class="box">
-	    <a href="semester-final.php">
+	    <a href="32.php">
         <i class="fas fa-pencil-alt"></i> <br>
 		  <h5 style="font-size: 18px;">3rd Year Even Semester</h5>	
 	    </a>
       </div>
 
 	  <div class="box">
-	    <a href="attendance.php">
+	    <a href="41.php">
         <i class="fas fa-pencil-alt"></i> <br>
 		  <h5 style="font-size: 18px;">4th Year Odd Semester</h5>	
 	    </a>
       </div>
   
 	  <div class="box">
-	    <a href="attendance.php">
+	    <a href="42.php">
         <i class="fas fa-pencil-alt"></i> <br>
 		  <h5 style="font-size: 18px;">4th Year Even Semester</h5>	
 	    </a>

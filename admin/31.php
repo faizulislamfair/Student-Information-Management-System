@@ -84,7 +84,7 @@ td > input {
 
   </style>
 
-  <title>2nd Year Odd Semester</title>
+  <title>3rd Year Odd Semester</title>
 </head>
 <body style="background-color: #EEEEEE">
 
