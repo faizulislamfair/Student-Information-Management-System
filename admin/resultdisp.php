@@ -133,7 +133,7 @@ require './dbcon.php';
 
             echo '<br>';
 
-            echo $res2103;
+            // echo $res2103;
 
             echo '<br>';
 
@@ -298,7 +298,7 @@ require './dbcon.php';
 
             echo '<br>';
 
-            echo $res2107;
+            // echo $res2107;
 
             echo '<br>';
 
@@ -470,7 +470,7 @@ require './dbcon.php';
 
             echo '<br>';
 
-            echo $res2111;
+            // echo $res2111;
 
             echo '<br>';
 
@@ -643,7 +643,7 @@ require './dbcon.php';
 
             echo '<br>';
 
-            echo $resmath2117;
+            // echo $resmath2117;
 
             echo '<br>';
 
@@ -815,7 +815,7 @@ require './dbcon.php';
 
             echo '<br>';
 
-            echo $reschem2117;
+            // echo $reschem2117;
 
             echo '<br>';
 
@@ -881,7 +881,7 @@ require './dbcon.php';
 
             echo '<br>';
 
-            echo $res2104;
+            // echo $res2104;
 
             echo '<br>';
 
@@ -941,7 +941,7 @@ require './dbcon.php';
 
             echo '<br>';
 
-            echo $res2108;
+            // echo $res2108;
 
             echo '<br>';
 
@@ -983,6 +983,64 @@ require './dbcon.php';
 
             // sessional ece 2108 ends
 
+            echo '<br>';
+
+
+            // sessional ece 2112 starts
+
+            
+            $att2112 = $row['ece_2112_att'];
+            $report2112 = $row['ece_2112_re'];
+            $quiz2112 = $row['ece_2112_quiz'];
+            $bv2112 = $row['ece_2112_bv'];
+
+            $res2112 = $att2112+$report2112+$quiz2112+$bv2112;
+
+            echo '<br>';
+
+            // echo $res2112;
+
+            echo '<br>';
+
+            if($res2112>=0 && $res2112<=39){
+                $gp2112 = 0.00;
+            }
+            else if($res2112>=40 && $res2112<=44){
+                $gp2112 = 2.00;
+            }
+            else if($res2112>=45 && $res2112<=49){
+                $gp2112 = 2.25;
+            }
+            else if($res2112>=50 && $res2112<=54){
+                $gp2112 = 2.50;
+            }
+            else if($res2112>=55 && $res2112<=59){
+                $gp2112 = 2.75;
+            }
+            else if($res2112>=60 && $res2112<=64){
+                $gp2112 = 3.00;
+            }
+            else if($res2112>=65 && $res2112<=69){
+                $gp2112 = 3.25;
+            }
+            else if($res2112>=70 && $res2112<=74){
+                $gp2112 = 3.50;
+            }
+            else if($res2112>=75 && $res2112<=79){
+                $gp2112 = 3.75;
+            }
+            else if($res2112>=80){
+                $gp2112 = 4.00;
+            }
+
+            echo '<br>';
+
+            echo $gp2112;
+
+
+            // sessional ece 2112 ends
+
+
 
             echo '<br>';
 
@@ -999,7 +1057,7 @@ require './dbcon.php';
 
             echo '<br>';
 
-            echo $res2118;
+            // echo $res2118;
 
             echo '<br>';
 
@@ -1057,7 +1115,7 @@ require './dbcon.php';
 
             echo '<br>';
 
-            echo $res2100;
+            // echo $res2100;
 
             echo '<br>';
 
@@ -1096,10 +1154,20 @@ require './dbcon.php';
 
             echo $gp2100;
 
+            echo '<br>';
+            echo '<br>';
+            echo '<br>';
+
 
             // project 2100 ends
 
+            $gpa21 =  (($gp2103+ $gp2107+ $gp2111+ $gpchem2117+ $gpmath2117)*3 + ($gp2104*1.5) + ($gp2108*0.75 + $gp2118*0.75 + $gp2112*0.75) + ($gp2100*0.75))/19.5;
 
+            $format_gpa21 = number_format($gpa21, 2);
+
+            echo $format_gpa21;
+
+        
 
 
 
