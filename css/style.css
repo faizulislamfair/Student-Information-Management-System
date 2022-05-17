@@ -38,3 +38,18 @@ body{
 .footer-area p {
     margin: 0;
 }
+
+
+.segment-area {
+    background: #5d9eda;
+    transform: translateX(280px);
+    width: 650px;
+    text-align: center;
+    padding: 30px 0;
+    color: #fff;
+    height: 80px;
+}
+
+.segment-area h2 {
+    margin: 0;
+}
