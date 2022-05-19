@@ -122,7 +122,7 @@ td > input {
 
 if(isset($_POST['semester_22insert'])){
 
-  $roll = $_POST['roll'];
+  $roll22 = $_POST['roll22'];
 
 
   $ece_2205_ct1 = $_POST['ece_2205_ct1'];
@@ -174,7 +174,7 @@ if(isset($_POST['semester_22insert'])){
   $ece_2200_score = $_POST['ece_2200_score'];
  
   
-  $query = "INSERT INTO `semester_22`(`roll`, `ece_2205_ct1`, `ece_2205_ct2`, `ece_2205_ct3`, `ece_2205_ct4`, `ece_2205_att`, `ece_2205_exam`, `ece_2213_ct1`, `ece_2213_ct2`, `ece_2213_ct3`, `ece_2213_ct4`, `ece_2213_att`, `ece_2213_exam`, `ece_2215_ct1`, `ece_2215_ct2`, `ece_2215_ct3`, `ece_2215_ct4`, `ece_2215_att`, `ece_2215_exam`, `math_2217_ct1`, `math_2217_ct2`, `math_2217_ct3`, `math_2217_ct4`, `math_2217_att`, `math_2217_exam`, `hum_2217_ct1`, `hum_2217_ct2`, `hum_2217_ct3`, `hum_2217_ct4`, `hum_2217_att`, `hum_2217_exam`, `ece_2206_re`, `ece_2206_att`, `ece_2206_quiz`, `ece_2206_bv`, `ece_2214_re`, `ece_2214_att`, `ece_2214_quiz`, `ece_2214_bv`, `ece_2216_re`, `ece_2216_att`, `ece_2216_quiz`, `ece_2216_bv`, `ece_2200_score`) VALUES ('$roll', '$ece_2205_ct1', '$ece_2205_ct2', '$ece_2205_ct3', '$ece_2205_ct4', '$ece_2205_att', '$ece_2205_exam', '$ece_2213_ct1', '$ece_2213_ct2', '$ece_2213_ct3', '$ece_2213_ct4', '$ece_2213_att', '$ece_2213_exam', '$ece_2215_ct1', '$ece_2215_ct2', '$ece_2215_ct3', '$ece_2215_ct4', '$ece_2215_att', '$ece_2215_exam', '$math_2217_ct1', '$math_2217_ct2', '$math_2217_ct3', '$math_2217_ct4', '$math_2217_att', '$math_2217_exam', '$hum_2217_ct1', '$hum_2217_ct2', '$hum_2217_ct3', '$hum_2217_ct4', '$hum_2217_att', '$hum_2217_exam', '$ece_2206_re', '$ece_2206_att', '$ece_2206_quiz', '$ece_2206_bv', '$ece_2214_re', '$ece_2214_att', '$ece_2214_quiz', '$ece_2214_bv', '$ece_2216_re', '$ece_2216_att', '$ece_2216_quiz', '$ece_2216_bv', '$ece_2200_score')";
+  $query = "INSERT INTO `semester_22`(`roll22`, `ece_2205_ct1`, `ece_2205_ct2`, `ece_2205_ct3`, `ece_2205_ct4`, `ece_2205_att`, `ece_2205_exam`, `ece_2213_ct1`, `ece_2213_ct2`, `ece_2213_ct3`, `ece_2213_ct4`, `ece_2213_att`, `ece_2213_exam`, `ece_2215_ct1`, `ece_2215_ct2`, `ece_2215_ct3`, `ece_2215_ct4`, `ece_2215_att`, `ece_2215_exam`, `math_2217_ct1`, `math_2217_ct2`, `math_2217_ct3`, `math_2217_ct4`, `math_2217_att`, `math_2217_exam`, `hum_2217_ct1`, `hum_2217_ct2`, `hum_2217_ct3`, `hum_2217_ct4`, `hum_2217_att`, `hum_2217_exam`, `ece_2206_re`, `ece_2206_att`, `ece_2206_quiz`, `ece_2206_bv`, `ece_2214_re`, `ece_2214_att`, `ece_2214_quiz`, `ece_2214_bv`, `ece_2216_re`, `ece_2216_att`, `ece_2216_quiz`, `ece_2216_bv`, `ece_2200_score`) VALUES ('$roll22', '$ece_2205_ct1', '$ece_2205_ct2', '$ece_2205_ct3', '$ece_2205_ct4', '$ece_2205_att', '$ece_2205_exam', '$ece_2213_ct1', '$ece_2213_ct2', '$ece_2213_ct3', '$ece_2213_ct4', '$ece_2213_att', '$ece_2213_exam', '$ece_2215_ct1', '$ece_2215_ct2', '$ece_2215_ct3', '$ece_2215_ct4', '$ece_2215_att', '$ece_2215_exam', '$math_2217_ct1', '$math_2217_ct2', '$math_2217_ct3', '$math_2217_ct4', '$math_2217_att', '$math_2217_exam', '$hum_2217_ct1', '$hum_2217_ct2', '$hum_2217_ct3', '$hum_2217_ct4', '$hum_2217_att', '$hum_2217_exam', '$ece_2206_re', '$ece_2206_att', '$ece_2206_quiz', '$ece_2206_bv', '$ece_2214_re', '$ece_2214_att', '$ece_2214_quiz', '$ece_2214_bv', '$ece_2216_re', '$ece_2216_att', '$ece_2216_quiz', '$ece_2216_bv', '$ece_2200_score')";
 
 
 
@@ -225,7 +225,7 @@ if(isset($_POST['semester_22insert'])){
           <tbody>
               <tr>
               <td>
-               <input type="text" name="roll" placeholder="Roll No."  class="form-control" required="" >
+               <input type="text" name="roll22" placeholder="Roll No."  class="form-control" required="" >
                </td>
               </tr>
           </tbody>
