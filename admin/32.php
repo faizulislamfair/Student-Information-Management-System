@@ -122,7 +122,7 @@ td > input {
 
 if(isset($_POST['semester_32insert'])){
 
-  $roll = $_POST['roll'];
+  $roll32 = $_POST['roll32'];
 
 
   $ece_3205_ct1 = $_POST['ece_3205_ct1'];
@@ -180,7 +180,7 @@ if(isset($_POST['semester_32insert'])){
   
 
   
-  $query = "INSERT INTO `semester_32`(`roll`, `ece_3205_ct1`, `ece_3205_ct2`, `ece_3205_ct3`, `ece_3205_ct4`, `ece_3205_att`, `ece_3205_exam`, `ece_3211_ct1`, `ece_3211_ct2`, `ece_3211_ct3`, `ece_3211_ct4`, `ece_3211_att`, `ece_3211_exam`, `ece_3221_ct1`, `ece_3221_ct2`, `ece_3221_ct3`, `ece_3221_ct4`, `ece_3221_att`, `ece_3221_exam`, `ece_3207_ct1`, `ece_3207_ct2`, `ece_3207_ct3`, `ece_3207_ct4`, `ece_3207_att`, `ece_3207_exam`, `ece_3219_ct1`, `ece_3219_ct2`, `ece_3219_ct3`, `ece_3219_ct4`, `ece_3219_att`, `ece_3219_exam`, `ece_3206_re`, `ece_3206_att`, `ece_3206_quiz`, `ece_3206_bv`, `ece_3212_re`, `ece_3212_att`, `ece_3212_quiz`, `ece_3212_bv`, `ece_3222_re`, `ece_3222_att`, `ece_3222_quiz`, `ece_3222_bv`, `ece_3208_re`, `ece_3208_att`, `ece_3208_quiz`, `ece_3208_bv`, `ece_3220_re`, `ece_3220_att`, `ece_3220_quiz`, `ece_3220_bv`) VALUES ('$roll', '$ece_3205_ct1', '$ece_3205_ct2', '$ece_3205_ct3', '$ece_3205_ct4', '$ece_3205_att', '$ece_3205_exam', '$ece_3211_ct1', '$ece_3211_ct2', '$ece_3211_ct3', '$ece_3211_ct4', '$ece_3211_att', '$ece_3211_exam', '$ece_3221_ct1', '$ece_3221_ct2', '$ece_3221_ct3', '$ece_3221_ct4', '$ece_3221_att', '$ece_3221_exam', '$ece_3207_ct1', '$ece_3207_ct2', '$ece_3207_ct3', '$ece_3207_ct4', '$ece_3207_att', '$ece_3207_exam', '$ece_3219_ct1', '$ece_3219_ct2', '$ece_3219_ct3', '$ece_3219_ct4', '$ece_3219_att', '$ece_3219_exam', '$ece_3206_re', '$ece_3206_att', '$ece_3206_quiz', '$ece_3206_bv', '$ece_3212_re', '$ece_3212_att', '$ece_3212_quiz', '$ece_3212_bv', '$ece_3222_re', '$ece_3222_att', '$ece_3222_quiz', '$ece_3222_bv', '$ece_3208_re', '$ece_3208_att', '$ece_3208_quiz', '$ece_3208_bv', '$ece_3220_re', '$ece_3220_att', '$ece_3220_quiz', '$ece_3220_bv')";
+  $query = "INSERT INTO `semester_32`(`roll32`, `ece_3205_ct1`, `ece_3205_ct2`, `ece_3205_ct3`, `ece_3205_ct4`, `ece_3205_att`, `ece_3205_exam`, `ece_3211_ct1`, `ece_3211_ct2`, `ece_3211_ct3`, `ece_3211_ct4`, `ece_3211_att`, `ece_3211_exam`, `ece_3221_ct1`, `ece_3221_ct2`, `ece_3221_ct3`, `ece_3221_ct4`, `ece_3221_att`, `ece_3221_exam`, `ece_3207_ct1`, `ece_3207_ct2`, `ece_3207_ct3`, `ece_3207_ct4`, `ece_3207_att`, `ece_3207_exam`, `ece_3219_ct1`, `ece_3219_ct2`, `ece_3219_ct3`, `ece_3219_ct4`, `ece_3219_att`, `ece_3219_exam`, `ece_3206_re`, `ece_3206_att`, `ece_3206_quiz`, `ece_3206_bv`, `ece_3212_re`, `ece_3212_att`, `ece_3212_quiz`, `ece_3212_bv`, `ece_3222_re`, `ece_3222_att`, `ece_3222_quiz`, `ece_3222_bv`, `ece_3208_re`, `ece_3208_att`, `ece_3208_quiz`, `ece_3208_bv`, `ece_3220_re`, `ece_3220_att`, `ece_3220_quiz`, `ece_3220_bv`) VALUES ('$roll32', '$ece_3205_ct1', '$ece_3205_ct2', '$ece_3205_ct3', '$ece_3205_ct4', '$ece_3205_att', '$ece_3205_exam', '$ece_3211_ct1', '$ece_3211_ct2', '$ece_3211_ct3', '$ece_3211_ct4', '$ece_3211_att', '$ece_3211_exam', '$ece_3221_ct1', '$ece_3221_ct2', '$ece_3221_ct3', '$ece_3221_ct4', '$ece_3221_att', '$ece_3221_exam', '$ece_3207_ct1', '$ece_3207_ct2', '$ece_3207_ct3', '$ece_3207_ct4', '$ece_3207_att', '$ece_3207_exam', '$ece_3219_ct1', '$ece_3219_ct2', '$ece_3219_ct3', '$ece_3219_ct4', '$ece_3219_att', '$ece_3219_exam', '$ece_3206_re', '$ece_3206_att', '$ece_3206_quiz', '$ece_3206_bv', '$ece_3212_re', '$ece_3212_att', '$ece_3212_quiz', '$ece_3212_bv', '$ece_3222_re', '$ece_3222_att', '$ece_3222_quiz', '$ece_3222_bv', '$ece_3208_re', '$ece_3208_att', '$ece_3208_quiz', '$ece_3208_bv', '$ece_3220_re', '$ece_3220_att', '$ece_3220_quiz', '$ece_3220_bv')";
 
 
 
@@ -231,7 +231,7 @@ if(isset($_POST['semester_32insert'])){
           <tbody>
               <tr>
               <td>
-               <input type="text" name="roll" placeholder="Roll No."  class="form-control" required="" >
+               <input type="text" name="roll32" placeholder="Roll No."  class="form-control" required="" >
                </td>
               </tr>
           </tbody>

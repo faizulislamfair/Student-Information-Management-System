@@ -122,7 +122,7 @@ td > input {
 
 if(isset($_POST['semester_31insert'])){
 
-  $roll = $_POST['roll'];
+  $roll31 = $_POST['roll31'];
 
 
   $ece_3107_ct1 = $_POST['ece_3107_ct1'];
@@ -174,7 +174,7 @@ if(isset($_POST['semester_31insert'])){
   $ece_3100_score = $_POST['ece_3100_score'];
  
   
-  $query = "INSERT INTO `semester_31`(`roll`, `ece_3107_ct1`, `ece_3107_ct2`, `ece_3107_ct3`, `ece_3107_ct4`, `ece_3107_att`, `ece_3107_exam`, `ece_3109_ct1`, `ece_3109_ct2`, `ece_3109_ct3`, `ece_3109_ct4`, `ece_3109_att`, `ece_3109_exam`, `ece_3111_ct1`, `ece_3111_ct2`, `ece_3111_ct3`, `ece_3111_ct4`, `ece_3111_att`, `ece_3111_exam`, `ece_3117_ct1`, `ece_3117_ct2`, `ece_3117_ct3`, `ece_3117_ct4`, `ece_3117_att`, `ece_3117_exam`, `ece_3119_ct1`, `ece_3119_ct2`, `ece_3119_ct3`, `ece_3119_ct4`, `ece_3119_att`, `ece_3119_exam`, `ece_3108_re`, `ece_3108_att`, `ece_3108_quiz`, `ece_3108_bv`, `ece_3112_re`, `ece_3112_att`, `ece_3112_quiz`, `ece_3112_bv`, `ece_3118_re`, `ece_3118_att`, `ece_3118_quiz`, `ece_3118_bv`, `ece_3100_score`) VALUES ('$roll', '$ece_3107_ct1', '$ece_3107_ct2', '$ece_3107_ct3', '$ece_3107_ct4', '$ece_3107_att', '$ece_3107_exam', '$ece_3109_ct1', '$ece_3109_ct2', '$ece_3109_ct3', '$ece_3109_ct4', '$ece_3109_att', '$ece_3109_exam', '$ece_3111_ct1', '$ece_3111_ct2', '$ece_3111_ct3', '$ece_3111_ct4', '$ece_3111_att', '$ece_3111_exam', '$ece_3117_ct1', '$ece_3117_ct2', '$ece_3117_ct3', '$ece_3117_ct4', '$ece_3117_att', '$ece_3117_exam', '$ece_3119_ct1', '$ece_3119_ct2', '$ece_3119_ct3', '$ece_3119_ct4', '$ece_3119_att', '$ece_3119_exam', '$ece_3108_re', '$ece_3108_att', '$ece_3108_quiz', '$ece_3108_bv', '$ece_3112_re', '$ece_3112_att', '$ece_3112_quiz', '$ece_3112_bv', '$ece_3118_re', '$ece_3118_att', '$ece_3118_quiz', '$ece_3118_bv', '$ece_3100_score')";
+  $query = "INSERT INTO `semester_31`(`roll31`, `ece_3107_ct1`, `ece_3107_ct2`, `ece_3107_ct3`, `ece_3107_ct4`, `ece_3107_att`, `ece_3107_exam`, `ece_3109_ct1`, `ece_3109_ct2`, `ece_3109_ct3`, `ece_3109_ct4`, `ece_3109_att`, `ece_3109_exam`, `ece_3111_ct1`, `ece_3111_ct2`, `ece_3111_ct3`, `ece_3111_ct4`, `ece_3111_att`, `ece_3111_exam`, `ece_3117_ct1`, `ece_3117_ct2`, `ece_3117_ct3`, `ece_3117_ct4`, `ece_3117_att`, `ece_3117_exam`, `ece_3119_ct1`, `ece_3119_ct2`, `ece_3119_ct3`, `ece_3119_ct4`, `ece_3119_att`, `ece_3119_exam`, `ece_3108_re`, `ece_3108_att`, `ece_3108_quiz`, `ece_3108_bv`, `ece_3112_re`, `ece_3112_att`, `ece_3112_quiz`, `ece_3112_bv`, `ece_3118_re`, `ece_3118_att`, `ece_3118_quiz`, `ece_3118_bv`, `ece_3100_score`) VALUES ('$roll31', '$ece_3107_ct1', '$ece_3107_ct2', '$ece_3107_ct3', '$ece_3107_ct4', '$ece_3107_att', '$ece_3107_exam', '$ece_3109_ct1', '$ece_3109_ct2', '$ece_3109_ct3', '$ece_3109_ct4', '$ece_3109_att', '$ece_3109_exam', '$ece_3111_ct1', '$ece_3111_ct2', '$ece_3111_ct3', '$ece_3111_ct4', '$ece_3111_att', '$ece_3111_exam', '$ece_3117_ct1', '$ece_3117_ct2', '$ece_3117_ct3', '$ece_3117_ct4', '$ece_3117_att', '$ece_3117_exam', '$ece_3119_ct1', '$ece_3119_ct2', '$ece_3119_ct3', '$ece_3119_ct4', '$ece_3119_att', '$ece_3119_exam', '$ece_3108_re', '$ece_3108_att', '$ece_3108_quiz', '$ece_3108_bv', '$ece_3112_re', '$ece_3112_att', '$ece_3112_quiz', '$ece_3112_bv', '$ece_3118_re', '$ece_3118_att', '$ece_3118_quiz', '$ece_3118_bv', '$ece_3100_score')";
 
 
 
@@ -225,7 +225,7 @@ if(isset($_POST['semester_31insert'])){
           <tbody>
               <tr>
               <td>
-               <input type="text" name="roll" placeholder="Roll No."  class="form-control" required="" >
+               <input type="text" name="roll31" placeholder="Roll No."  class="form-control" required="" >
                </td>
               </tr>
           </tbody>
