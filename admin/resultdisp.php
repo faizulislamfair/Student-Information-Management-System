@@ -7158,3 +7158,1278 @@ while($row = mysqli_fetch_assoc($db_12)){
 
  <!-- Result 3-2 Ends -->
 
+ 
+
+<!-- Result 4-1 Starts -->
+
+
+<div class="segment-area">
+   <h3>4th Year Odd Semester Result</h3>
+</div>
+
+
+
+
+<?php
+
+       $db_41 = mysqli_query($link, "SELECT * FROM `semester_41` ");
+     while($row = mysqli_fetch_assoc($db_41)){
+?>
+
+
+           <?php
+
+
+           // theory ece 4109 starts
+
+           $ct1_4109 = $row['ece_4109_ct1'];
+           $ct2_4109 = $row['ece_4109_ct2'];
+           $ct3_4109 = $row['ece_4109_ct3'];
+           $ct4_4109 = $row['ece_4109_ct4'];
+           $att4109 = $row['ece_4109_att'];
+           $exam4109 = $row['ece_4109_exam'];
+
+
+           if($ct1_4109==0){
+               $avg_4109 = ($ct2_4109+$ct3_4109+$ct4_4109)/3;
+           }
+           else if($ct2_4109==0){
+               $avg_4109 = ($ct1_4109+$ct3_4109+$ct4_4109)/3;
+           }
+           else if($ct3_4109==0){
+               $avg_4109 = ($ct2_4109+$ct1_4109+$ct4_4109)/3;
+           }
+           else if($ct4_4109==0){
+               $avg_4109 = ($ct2_4109+$ct3_4109+$ct1_4109)/3;
+           }
+           else if($ct1_4109==0 && $ct2_4109==0){
+               $avg_4109 = ($ct3_4109+$ct4_4109)/3;
+           }
+           else if($ct1_4109==0 && $ct3_4109==0){
+               $avg_4109 = ($ct2_4109+$ct4_4109)/3;
+           }
+           else if($ct1_4109==0 && $ct4_4109==0){
+               $avg_4109 = ($ct2_4109+$ct3_4109)/3;
+           }
+           else if($ct2_4109==0 && $ct3_4109==0){
+               $avg_4109 = ($ct1_4109+$ct4_4109)/3;
+           }
+           else if($ct2_4109==0 && $ct4_4109==0){
+               $avg_4109 = ($ct1_4109+$ct3_4109)/3;
+           }
+           else if($ct3_4109==0 && $ct4_4109==0){
+               $avg_4109 = ($ct1_4109+$ct2_4109)/3;
+           }
+           else if($ct1_4109==0 && $ct2_4109==0 && $ct3_4109==0){
+               $avg_4109 = $ct4_4109/3;
+           }
+           else if($ct1_4109==0 && $ct2_4109==0 && $ct4_4109==0){
+               $avg_4109 = $ct3_4109/3;
+           }
+           else if($ct1_4109==0 && $ct3_4109==0 && $ct4_4109==0){
+               $avg_4109 = $ct2_4109/3;
+           }
+           else if($ct2_4109==0 && $ct3_4109==0 && $ct4_4109==0){
+               $avg_4109 = $ct1_4109/3;
+           }
+           else if($ct1_4109==0 && $ct2_4109==0 && $ct3_4109==0 && $ct4_4109==0){
+               $avg_4109 = 0;
+           }
+           else if(($ct1_4109 > $ct3_4109) && ($ct1_4109 > $ct4_4109) && ($ct2_4109 > $ct3_4109) && ($ct2_4109 > $ct4_4109) && ($ct3_4109 == $ct4_4109)){
+               $avg_4109 = ($ct1_4109+$ct2_4109+$ct3_4109)/3;
+           }
+           else if(($ct1_4109 > $ct2_4109) && ($ct1_4109 > $ct4_4109) && ($ct3_4109 > $ct2_4109) && ($ct3_4109 > $ct4_4109) && ($ct2_4109 == $ct4_4109)){
+               $avg_4109 = ($ct1_4109+$ct2_4109+$ct3_4109)/3;
+           }
+           else if(($ct1_4109 > $ct2_4109) && ($ct1_4109 > $ct3_4109) && ($ct4_4109 > $ct2_4109) && ($ct4_4109 > $ct3_4109) && ($ct2_4109 == $ct3_4109)){
+               $avg_4109 = ($ct1_4109+$ct2_4109+$ct4_4109)/3;
+           }
+           else if(($ct2_4109 > $ct1_4109) && ($ct2_4109 > $ct4_4109) && ($ct3_4109 > $ct1_4109) && ($ct3_4109 > $ct4_4109) && ($ct1_4109 == $ct4_4109)){
+               $avg_4109 = ($ct1_4109+$ct2_4109+$ct3_4109)/3;
+           }
+           else if(($ct2_4109 > $ct1_4109) && ($ct2_4109 > $ct3_4109) && ($ct4_4109 > $ct1_4109) && ($ct4_4109 > $ct3_4109) && ($ct1_4109 == $ct3_4109)){
+               $avg_4109 = ($ct1_4109+$ct2_4109+$ct4_4109)/3;
+           }
+           else if(($ct3_4109 > $ct1_4109) && ($ct3_4109 > $ct2_4109) && ($ct4_4109 > $ct1_4109) && ($ct4_4109 > $ct2_4109) && ($ct1_4109 == $ct2_4109)){
+               $avg_4109 = ($ct1_4109+$ct3_4109+$ct4_4109)/3;
+           }
+           else if(($ct1_4109 > $ct4_4109) && ($ct2_4109 > $ct4_4109) && ($ct3_4109 > $ct4_4109 )){
+               $avg_4109 = ($ct1_4109+$ct2_4109+$ct3_4109)/3;
+           }
+           else if(($ct1_4109 > $ct3_4109) && ($ct2_4109 > $ct3_4109) && ($ct4_4109 > $ct3_4109 )){
+               $avg_4109 = ($ct1_4109+$ct2_4109+$ct4_4109)/3;
+           }
+           else if(($ct1_4109 > $ct2_4109) && ($ct3_4109 > $ct2_4109) && ($ct4_4109 > $ct2_4109 )){
+               $avg_4109 = ($ct1_4109+$ct3_4109+$ct4_4109)/3;
+           }
+           else if(($ct2_4109 > $ct1_4109) && ($ct3_4109 > $ct1_4109) && ($ct4_4109 > $ct1_4109 )){
+               $avg_4109 = ($ct2_4109+$ct3_4109+$ct4_4109)/3;
+           }
+           else if($ct1_4109==$ct2_4109 && $ct2_4109==$ct3_4109 && $ct3_4109==$ct4_4109){
+               $avg_4109 = ($ct1_4109+$ct2_4109+$ct3_4109)/3;
+           }
+           else if(($ct1_4109 > $ct2_4109) && ($ct2_4109 > $ct3_4109) && ($ct3_4109 > $ct4_4109)){
+               $avg_4109 = ($ct1_4109+$ct2_4109+$ct3_4109)/3;
+           }
+           else if(($ct2_4109 > $ct3_4109) && ($ct3_4109 > $ct4_4109) && ($ct4_4109 > $ct1_4109)){
+               $avg_4109 = ($ct2_4109+$ct3_4109+$ct4_4109)/3;
+           }
+           else if(($ct3_4109 > $ct4_4109) && ($ct4_4109 > $ct1_4109) && ($ct1_4109 > $ct2_4109)){
+               $avg_4109 = ($ct1_4109+$ct3_4109+$ct4_4109)/3;
+           }
+           else if(($ct4_4109 > $ct1_4109) && ($ct1_4109 > $ct2_4109) && ($ct2_4109 > $ct3_4109)){
+               $avg_4109 = ($ct1_4109+$ct2_4109+$ct4_4109)/3;
+           }
+           else if(($ct1_4109 > $ct2_4109) && ($ct1_4109 > $ct3_4109) && ($ct1_4109 > $ct4_4109) && ($ct2_4109==$ct3_4109) && ($ct3_4109==$ct4_4109)){
+               $avg_4109 = ($ct1_4109+$ct2_4109+$ct3_4109)/3;
+           }
+           else if(($ct2_4109 > $ct3_4109) && ($ct2_4109 > $ct4_4109) && ($ct2_4109 > $ct1_4109) && ($ct3_4109==$ct4_4109) && ($ct4_4109==$ct1_4109)){
+               $avg_4109 = ($ct2_4109+$ct3_4109+$ct4_4109)/3;
+           }
+           else if(($ct3_4109 > $ct1_4109) && ($ct3_4109 > $ct2_4109) && ($ct3_4109 > $ct4_4109) && ($ct1_4109==$ct2_4109) && ($ct2_4109==$ct4_4109)){
+               $avg_4109 = ($ct3_4109+$ct2_4109+$ct4_4109)/3;
+           }
+           else if(($ct4_4109 > $ct1_4109) && ($ct4_4109 > $ct2_4109) && ($ct4_4109 > $ct3_4109) && ($ct1_4109==$ct2_4109) && ($ct2_4109==$ct3_4109)){
+               $avg_4109 = ($ct1_4109+$ct2_4109+$ct4_4109)/3;
+           }
+
+
+
+           $res4109 = $avg_4109+$att4109+$exam4109;
+
+           //echo '<br>';
+
+           // echo $res4109;
+
+           //echo '<br>';
+
+           if($res4109>=0 && $res4109<=39){
+               $gp4109 = 0.00;
+           }
+           else if($res4109>39 && $res4109<=44){
+               $gp4109 = 2.00;
+           }
+           else if($res4109>44 && $res4109<=49){
+               $gp4109 = 2.25;
+           }
+           else if($res4109>49 && $res4109<=54){
+               $gp4109 = 2.50;
+           }
+           else if($res4109>54 && $res4109<=59){
+               $gp4109 = 2.75;
+           }
+           else if($res4109>59 && $res4109<=64){
+               $gp4109 = 3.00;
+           }
+           else if($res4109>64 && $res4109<=69){
+               $gp4109 = 3.25;
+           }
+           else if($res4109>69 && $res4109<=74){
+               $gp4109 = 3.50;
+           }
+           else if($res4109>74 && $res4109<=79){
+               $gp4109 = 3.75;
+           }
+           else if($res4109>79){
+               $gp4109 = 4.00;
+           }
+
+           //echo '<br>';
+
+           // echo $gp4109;
+
+
+           //theory ece 4109 ends
+
+
+            //echo '<br>';
+
+
+           // theory ece 4123 starts
+
+           $ct1_4123 = $row['ece_4123_ct1'];
+           $ct2_4123 = $row['ece_4123_ct2'];
+           $ct3_4123 = $row['ece_4123_ct3'];
+           $ct4_4123 = $row['ece_4123_ct4'];
+           $att4123 = $row['ece_4123_att'];
+           $exam4123 = $row['ece_4123_exam'];
+
+
+           if($ct1_4123==0){
+               $avg_4123 = ($ct2_4123+$ct3_4123+$ct4_4123)/3;
+           }
+           else if($ct2_4123==0){
+               $avg_4123 = ($ct1_4123+$ct3_4123+$ct4_4123)/3;
+           }
+           else if($ct3_4123==0){
+               $avg_4123 = ($ct2_4123+$ct1_4123+$ct4_4123)/3;
+           }
+           else if($ct4_4123==0){
+               $avg_4123 = ($ct2_4123+$ct3_4123+$ct1_4123)/3;
+           }
+           else if($ct1_4123==0 && $ct2_4123==0){
+               $avg_4123 = ($ct3_4123+$ct4_4123)/3;
+           }
+           else if($ct1_4123==0 && $ct3_4123==0){
+               $avg_4123 = ($ct2_4123+$ct4_4123)/3;
+           }
+           else if($ct1_4123==0 && $ct4_4123==0){
+               $avg_4123 = ($ct2_4123+$ct3_4123)/3;
+           }
+           else if($ct2_4123==0 && $ct3_4123==0){
+               $avg_4123 = ($ct1_4123+$ct4_4123)/3;
+           }
+           else if($ct2_4123==0 && $ct4_4123==0){
+               $avg_4123 = ($ct1_4123+$ct3_4123)/3;
+           }
+           else if($ct3_4123==0 && $ct4_4123==0){
+               $avg_4123 = ($ct1_4123+$ct2_4123)/3;
+           }
+           else if($ct1_4123==0 && $ct2_4123==0 && $ct3_4123==0){
+               $avg_4123 = $ct4_4123/3;
+           }
+           else if($ct1_4123==0 && $ct2_4123==0 && $ct4_4123==0){
+               $avg_4123 = $ct3_4123/3;
+           }
+           else if($ct1_4123==0 && $ct3_4123==0 && $ct4_4123==0){
+               $avg_4123 = $ct2_4123/3;
+           }
+           else if($ct2_4123==0 && $ct3_4123==0 && $ct4_4123==0){
+               $avg_4123 = $ct1_4123/3;
+           }
+           else if($ct1_4123==0 && $ct2_4123==0 && $ct3_4123==0 && $ct4_4123==0){
+               $avg_4123 = 0;
+           }
+           else if(($ct1_4123 > $ct3_4123) && ($ct1_4123 > $ct4_4123) && ($ct2_4123 > $ct3_4123) && ($ct2_4123 > $ct4_4123) && ($ct3_4123 == $ct4_4123)){
+               $avg_4123 = ($ct1_4123+$ct2_4123+$ct3_4123)/3;
+           }
+           else if(($ct1_4123 > $ct2_4123) && ($ct1_4123 > $ct4_4123) && ($ct3_4123 > $ct2_4123) && ($ct3_4123 > $ct4_4123) && ($ct2_4123 == $ct4_4123)){
+               $avg_4123 = ($ct1_4123+$ct2_4123+$ct3_4123)/3;
+           }
+           else if(($ct1_4123 > $ct2_4123) && ($ct1_4123 > $ct3_4123) && ($ct4_4123 > $ct2_4123) && ($ct4_4123 > $ct3_4123) && ($ct2_4123 == $ct3_4123)){
+               $avg_4123 = ($ct1_4123+$ct2_4123+$ct4_4123)/3;
+           }
+           else if(($ct2_4123 > $ct1_4123) && ($ct2_4123 > $ct4_4123) && ($ct3_4123 > $ct1_4123) && ($ct3_4123 > $ct4_4123) && ($ct1_4123 == $ct4_4123)){
+               $avg_4123 = ($ct1_4123+$ct2_4123+$ct3_4123)/3;
+           }
+           else if(($ct2_4123 > $ct1_4123) && ($ct2_4123 > $ct3_4123) && ($ct4_4123 > $ct1_4123) && ($ct4_4123 > $ct3_4123) && ($ct1_4123 == $ct3_4123)){
+               $avg_4123 = ($ct1_4123+$ct2_4123+$ct4_4123)/3;
+           }
+           else if(($ct3_4123 > $ct1_4123) && ($ct3_4123 > $ct2_4123) && ($ct4_4123 > $ct1_4123) && ($ct4_4123 > $ct2_4123) && ($ct1_4123 == $ct2_4123)){
+               $avg_4123 = ($ct1_4123+$ct3_4123+$ct4_4123)/3;
+           }
+           else if(($ct1_4123 > $ct4_4123) && ($ct2_4123 > $ct4_4123) && ($ct3_4123 > $ct4_4123)){
+               $avg_4123 = ($ct1_4123+$ct2_4123+$ct3_4123)/3;
+           }
+           else if(($ct1_4123 > $ct3_4123) && ($ct2_4123 > $ct3_4123) && ($ct4_4123 > $ct3_4123 )){
+               $avg_4123 = ($ct1_4123+$ct2_4123+$ct4_4123)/3;
+           }
+           else if(($ct1_4123 > $ct2_4123) && ($ct3_4123 > $ct2_4123) && ($ct4_4123 > $ct2_4123) ){
+               $avg_4123 = ($ct1_4123+$ct3_4123+$ct4_4123)/3;
+           }
+           else if(($ct2_4123 > $ct1_4123) && ($ct3_4123 > $ct1_4123) && ($ct4_4123 > $ct1_4123)){
+               $avg_4123 = ($ct2_4123+$ct3_4123+$ct4_4123)/3;
+           }
+           else if($ct1_4123==$ct2_4123 && $ct2_4123==$ct3_4123 && $ct3_4123==$ct4_4123){
+               $avg_4123 = ($ct1_4123+$ct2_4123+$ct3_4123)/3;
+           }
+           else if(($ct1_4123 > $ct2_4123) && ($ct2_4123 > $ct3_4123) && ($ct3_4123 > $ct4_4123)){
+               $avg_4123 = ($ct1_4123+$ct2_4123+$ct3_4123)/3;
+           }
+           else if(($ct2_4123 > $ct3_4123) && ($ct3_4123 > $ct4_4123) && ($ct4_4123 > $ct1_4123)){
+               $avg_4123 = ($ct2_4123+$ct3_4123+$ct4_4123)/3;
+           }
+           else if(($ct3_4123 > $ct4_4123) && ($ct4_4123 > $ct1_4123) && ($ct1_4123 > $ct2_4123)){
+               $avg_4123 = ($ct1_4123+$ct3_4123+$ct4_4123)/3;
+           }
+           else if(($ct4_4123 > $ct1_4123) && ($ct1_4123 > $ct2_4123) && ($ct2_4123 > $ct3_4123)){
+               $avg_4123 = ($ct1_4123+$ct2_4123+$ct4_4123)/3;
+           }
+           else if(($ct1_4123 > $ct2_4123) && ($ct1_4123 > $ct3_4123) && ($ct1_4123 > $ct4_4123) && ($ct2_4123==$ct3_4123) && ($ct3_4123==$ct4_4123)){
+               $avg_4123 = ($ct1_4123+$ct2_4123+$ct3_4123)/3;
+           }
+           else if(($ct2_4123 > $ct3_4123) && ($ct2_4123 > $ct4_4123) && ($ct2_4123 > $ct1_4123) && ($ct3_4123==$ct4_4123) && ($ct4_4123==$ct1_4123)){
+               $avg_4123 = ($ct1_4123+$ct2_4123+$ct3_4123)/3;
+           }
+           else if(($ct3_4123 > $ct1_4123) && ($ct3_4123 > $ct2_4123) && ($ct3_4123 > $ct4_4123) && ($ct1_4123==$ct2_4123) && ($ct2_4123==$ct4_4123)){
+               $avg_4123 = ($ct3_4123+$ct2_4123+$ct4_4123)/3;
+           }
+           else if(($ct4_4123 > $ct1_4123) && ($ct4_4123 > $ct2_4123) && ($ct4_4123 > $ct3_4123) && ($ct1_4123==$ct2_4123) && ($ct2_4123==$ct3_4123)){
+               $avg_4123 = ($ct1_4123+$ct2_4123+$ct4_4123)/3;
+           }
+
+
+
+           $res4123 = $avg_4123+$att4123+$exam4123;
+
+           //echo '<br>';
+
+           // echo $res4123;
+
+           //echo '<br>';
+
+           if($res4123>=0 && $res4123<=39){
+               $gp4123 = 0.00;
+           }
+           else if($res4123>39 && $res4123<=44){
+               $gp4123 = 2.00;
+           }
+           else if($res4123>44 && $res4123<=49){
+               $gp4123 = 2.25;
+           }
+           else if($res4123>49 && $res4123<=54){
+               $gp4123 = 2.50;
+           }
+           else if($res4123>54 && $res4123<=59){
+               $gp4123 = 2.75;
+           }
+           else if($res4123>59 && $res4123<=64){
+               $gp4123 = 3.00;
+           }
+           else if($res4123>64 && $res4123<=69){
+               $gp4123 = 3.25;
+           }
+           else if($res4123>69 && $res4123<=74){
+               $gp4123 = 3.50;
+           }
+           else if($res4123>74 && $res4123<=79){
+               $gp4123 = 3.75;
+           }
+           else if($res4123>79){
+               $gp4123 = 4.00;
+           }
+
+           //echo '<br>';
+
+           // echo $gp4123;
+
+
+           //theory ece 4123 ends
+
+
+
+
+           //echo "<br>";
+
+
+
+           // theory ece 4121 starts
+
+
+           $ct1_4121 = $row['ece_4121_ct1'];
+           $ct2_4121 = $row['ece_4121_ct2'];
+           $ct3_4121 = $row['ece_4121_ct3'];
+           $ct4_4121 = $row['ece_4121_ct4'];
+           $att4121 = $row['ece_4121_att'];
+           $exam4121 = $row['ece_4121_exam'];
+
+
+
+
+
+           if($ct1_4121==0){
+               $avg_4121 = ($ct2_4121+$ct3_4121+$ct4_4121)/3;
+           }
+           else if($ct2_4121==0){
+               $avg_4121 = ($ct1_4121+$ct3_4121+$ct4_4121)/3;
+           }
+           else if($ct3_4121==0){
+               $avg_4121 = ($ct2_4121+$ct1_4121+$ct4_4121)/3;
+           }
+           else if($ct4_4121==0){
+               $avg_4121 = ($ct2_4121+$ct3_4121+$ct1_4121)/3;
+           }
+           else if($ct1_4121==0 && $ct2_4121==0){
+               $avg_4121 = ($ct3_4121+$ct4_4121)/3;
+           }
+           else if($ct1_4121==0 && $ct3_4121==0){
+               $avg_4121 = ($ct2_4121+$ct4_4121)/3;
+           }
+           else if($ct1_4121==0 && $ct4_4121==0){
+               $avg_4121 = ($ct2_4121+$ct3_4121)/3;
+           }
+           else if($ct2_4121==0 && $ct3_4121==0){
+               $avg_4121 = ($ct1_4121+$ct4_4121)/3;
+           }
+           else if($ct2_4121==0 && $ct4_4121==0){
+               $avg_4121 = ($ct1_4121+$ct3_4121)/3;
+           }
+           else if($ct3_4121==0 && $ct4_4121==0){
+               $avg_4121 = ($ct1_4121+$ct2_4121)/3;
+           }
+           else if($ct1_4121==0 && $ct2_4121==0 && $ct3_4121==0){
+               $avg_4121 = $ct4_4121/3;
+           }
+           else if($ct1_4121==0 && $ct2_4121==0 && $ct4_4121==0){
+               $avg_4121 = $ct3_4121/3;
+           }
+           else if($ct1_4121==0 && $ct3_4121==0 && $ct4_4121==0){
+               $avg_4121 = $ct2_4121/3;
+           }
+           else if($ct2_4121==0 && $ct3_4121==0 && $ct4_4121==0){
+               $avg_4121 = $ct1_4121/3;
+           }
+           else if($ct1_4121==0 && $ct2_4121==0 && $ct3_4121==0 && $ct4_4121==0){
+               $avg_4121 = 0;
+           }
+           else if(($ct1_4121 > $ct3_4121) && ($ct1_4121 > $ct4_4121) && ($ct2_4121 > $ct3_4121) && ($ct2_4121 > $ct4_4121) && ($ct3_4121 == $ct4_4121)){
+               $avg_4121 = ($ct1_4121+$ct2_4121+$ct3_4121)/3;
+           }
+           else if(($ct1_4121 > $ct2_4121) && ($ct1_4121 > $ct4_4121) && ($ct3_4121 > $ct2_4121) && ($ct3_4121 > $ct4_4121) && ($ct2_4121 == $ct4_4121)){
+               $avg_4121 = ($ct1_4121+$ct2_4121+$ct3_4121)/3;
+           }
+           else if(($ct1_4121 > $ct2_4121) && ($ct1_4121 > $ct3_4121) && ($ct4_4121 > $ct2_4121) && ($ct4_4121 > $ct3_4121) && ($ct2_4121 == $ct3_4121)){
+               $avg_4121 = ($ct1_4121+$ct2_4121+$ct4_4121)/3;
+           }
+           else if(($ct2_4121 > $ct1_4121) && ($ct2_4121 > $ct4_4121) && ($ct3_4121 > $ct1_4121) && ($ct3_4121 > $ct4_4121) && ($ct1_4121 == $ct4_4121)){
+               $avg_4121 = ($ct1_4121+$ct2_4121+$ct3_4121)/3;
+           }
+           else if(($ct2_4121 > $ct1_4121) && ($ct2_4121 > $ct3_4121) && ($ct4_4121 > $ct1_4121) && ($ct4_4121 > $ct3_4121) && ($ct1_4121 == $ct3_4121)){
+               $avg_4121 = ($ct1_4121+$ct2_4121+$ct4_4121)/3;
+           }
+           else if(($ct3_4121 > $ct1_4121) && ($ct3_4121 > $ct2_4121) && ($ct4_4121 > $ct1_4121) && ($ct4_4121 > $ct2_4121) && ($ct1_4121 == $ct2_4121)){
+               $avg_4121 = ($ct1_4121+$ct3_4121+$ct4_4121)/3;
+           }
+           else if(($ct1_4121 > $ct4_4121) && ($ct2_4121 > $ct4_4121) && ($ct3_4121 > $ct4_4121)){
+               $avg_4121 = ($ct1_4121+$ct2_4121+$ct3_4121)/3;
+           }
+           else if(($ct1_4121 > $ct3_4121) && ($ct2_4121 > $ct3_4121) && ($ct4_4121 > $ct3_4121 )){
+               $avg_4121 = ($ct1_4121+$ct2_4121+$ct4_4121)/3;
+           }
+           else if(($ct1_4121 > $ct2_4121) && ($ct3_4121 > $ct2_4121) && ($ct4_4121 > $ct2_4121) ){
+               $avg_4121 = ($ct1_4121+$ct3_4121+$ct4_4121)/3;
+           }
+           else if(($ct2_4121 > $ct1_4121) && ($ct3_4121 > $ct1_4121) && ($ct4_4121 > $ct1_4121)){
+               $avg_4121 = ($ct2_4121+$ct3_4121+$ct4_4121)/3;
+           }
+           else if($ct1_4121==$ct2_4121 && $ct2_4121==$ct3_4121 && $ct3_4121==$ct4_4121){
+               $avg_4121 = ($ct1_4121+$ct2_4121+$ct3_4121)/3;
+           }
+           else if(($ct1_4121 > $ct2_4121) && ($ct2_4121 > $ct3_4121) && ($ct3_4121 > $ct4_4121)){
+               $avg_4121 = ($ct1_4121+$ct2_4121+$ct3_4121)/3;
+           }
+           else if(($ct2_4121 > $ct3_4121) && ($ct3_4121 > $ct4_4121) && ($ct4_4121 > $ct1_4121)){
+               $avg_4121 = ($ct2_4121+$ct3_4121+$ct4_4121)/3;
+           }
+           else if(($ct3_4121 > $ct4_4121) && ($ct4_4121 > $ct1_4121) && ($ct1_4121 > $ct2_4121)){
+               $avg_4121 = ($ct1_4121+$ct3_4121+$ct4_4121)/3;
+           }
+           else if(($ct4_4121 > $ct1_4121) && ($ct1_4121 > $ct2_4121) && ($ct2_4121 > $ct3_4121)){
+               $avg_4121 = ($ct1_4121+$ct2_4121+$ct4_4121)/3;
+           }
+           else if(($ct1_4121 > $ct2_4121) && ($ct1_4121 > $ct3_4121) && ($ct1_4121 > $ct4_4121) && ($ct2_4121==$ct3_4121) && ($ct3_4121==$ct4_4121)){
+               $avg_4121 = ($ct1_4121+$ct2_4121+$ct3_4121)/3;
+           }
+           else if(($ct2_4121 > $ct3_4121) && ($ct2_4121 > $ct4_4121) && ($ct2_4121 > $ct1_4121) && ($ct3_4121==$ct4_4121) && ($ct4_4121==$ct1_4121)){
+               $avg_4121 = ($ct1_4121+$ct2_4121+$ct3_4121)/3;
+           }
+           else if(($ct3_4121 > $ct1_4121) && ($ct3_4121 > $ct2_4121) && ($ct3_4121 > $ct4_4121) && ($ct1_4121==$ct2_4121) && ($ct2_4121==$ct4_4121)){
+               $avg_4121 = ($ct3_4121+$ct2_4121+$ct4_4121)/3;
+           }
+           else if(($ct4_4121 > $ct1_4121) && ($ct4_4121 > $ct2_4121) && ($ct4_4121 > $ct3_4121) && ($ct1_4121==$ct2_4121) && ($ct2_4121==$ct3_4121)){
+               $avg_4121 = ($ct1_4121+$ct2_4121+$ct4_4121)/3;
+           }
+
+
+
+           $res4121 = $avg_4121+$att4121+$exam4121;
+
+           //echo '<br>';
+
+           // echo $res4121;
+
+           //echo '<br>';
+
+           if($res4121>=0 && $res4121<=39){
+               $gp4121 = 0.00;
+           }
+           else if($res4121>39 && $res4121<=44){
+               $gp4121 = 2.00;
+           }
+           else if($res4121>44 && $res4121<=49){
+               $gp4121 = 2.25;
+           }
+           else if($res4121>49 && $res4121<=54){
+               $gp4121 = 2.50;
+           }
+           else if($res4121>54 && $res4121<=59){
+               $gp4121 = 2.75;
+           }
+           else if($res4121>59 && $res4121<=64){
+               $gp4121 = 3.00;
+           }
+           else if($res4121>64 && $res4121<=69){
+               $gp4121 = 3.25;
+           }
+           else if($res4121>69 && $res4121<=74){
+               $gp4121 = 3.50;
+           }
+           else if($res4121>74 && $res4121<=79){
+               $gp4121 = 3.75;
+           }
+           else if($res4121>79){
+               $gp4121 = 4.00;
+           }
+
+           //echo '<br>';
+
+           // echo $gp4121;
+
+
+
+
+           //theory ece 4121 ends
+
+
+
+
+           //echo '<br>';
+
+
+
+
+           // theory ece 41opt1 starts
+
+
+           $ct1_41opt1 = $row['ece_41opt1_ct1'];
+           $ct2_41opt1 = $row['ece_41opt1_ct2'];
+           $ct3_41opt1 = $row['ece_41opt1_ct3'];
+           $ct4_41opt1 = $row['ece_41opt1_ct4'];
+           $att41opt1 = $row['ece_41opt1_att'];
+           $exam_41opt1 = $row['ece_41opt1_exam'];
+
+
+
+           if($ct1_41opt1==0){
+               $avg_41opt1 = ($ct2_41opt1+$ct3_41opt1+$ct4_41opt1)/3;
+           }
+           else if($ct2_41opt1==0){
+               $avg_41opt1 = ($ct1_41opt1+$ct3_41opt1+$ct4_41opt1)/3;
+           }
+           else if($ct3_41opt1==0){
+               $avg_41opt1 = ($ct2_41opt1+$ct1_41opt1+$ct4_41opt1)/3;
+           }
+           else if($ct4_41opt1==0){
+               $avg_41opt1 = ($ct2_41opt1+$ct3_41opt1+$ct1_41opt1)/3;
+           }
+           else if($ct1_41opt1==0 && $ct2_41opt1==0){
+               $avg_41opt1 = ($ct3_41opt1+$ct4_41opt1)/3;
+           }
+           else if($ct1_41opt1==0 && $ct3_41opt1==0){
+               $avg_41opt1 = ($ct2_41opt1+$ct4_41opt1)/3;
+           }
+           else if($ct1_41opt1==0 && $ct4_41opt1==0){
+               $avg_41opt1 = ($ct2_41opt1+$ct3_41opt1)/3;
+           }
+           else if($ct2_41opt1==0 && $ct3_41opt1==0){
+               $avg_41opt1 = ($ct1_41opt1+$ct4_41opt1)/3;
+           }
+           else if($ct2_41opt1==0 && $ct4_41opt1==0){
+               $avg_41opt1 = ($ct1_41opt1+$ct3_41opt1)/3;
+           }
+           else if($ct3_41opt1==0 && $ct4_41opt1==0){
+               $avg_41opt1 = ($ct1_41opt1+$ct2_41opt1)/3;
+           }
+           else if($ct1_41opt1==0 && $ct2_41opt1==0 && $ct3_41opt1==0){
+               $avg_41opt1 = $ct4_41opt1/3;
+           }
+           else if($ct1_41opt1==0 && $ct2_41opt1==0 && $ct4_41opt1==0){
+               $avg_41opt1 = $ct3_41opt1/3;
+           }
+           else if($ct1_41opt1==0 && $ct3_41opt1==0 && $ct4_41opt1==0){
+               $avg_41opt1 = $ct2_41opt1/3;
+           }
+           else if($ct2_41opt1==0 && $ct3_41opt1==0 && $ct4_41opt1==0){
+               $avg_41opt1 = $ct1_41opt1/3;
+           }
+           else if($ct1_41opt1==0 && $ct2_41opt1==0 && $ct3_41opt1==0 && $ct4_41opt1==0){
+               $avg_41opt1 = 0;
+           }
+           else if(($ct1_41opt1 > $ct3_41opt1) && ($ct1_41opt1 > $ct4_41opt1) && ($ct2_41opt1 > $ct3_41opt1) && ($ct2_41opt1 > $ct4_41opt1) && ($ct3_41opt1 == $ct4_41opt1)){
+               $avg_41opt1 = ($ct1_41opt1+$ct2_41opt1+$ct3_41opt1)/3;
+           }
+           else if(($ct1_41opt1 > $ct2_41opt1) && ($ct1_41opt1 > $ct4_41opt1) && ($ct3_41opt1 > $ct2_41opt1) && ($ct3_41opt1 > $ct4_41opt1) && ($ct2_41opt1 == $ct4_41opt1)){
+               $avg_41opt1 = ($ct1_41opt1+$ct2_41opt1+$ct3_41opt1)/3;
+           }
+           else if(($ct1_41opt1 > $ct2_41opt1) && ($ct1_41opt1 > $ct3_41opt1) && ($ct4_41opt1 > $ct2_41opt1) && ($ct4_41opt1 > $ct3_41opt1) && ($ct2_41opt1 == $ct3_41opt1)){
+               $avg_41opt1 = ($ct1_41opt1+$ct2_41opt1+$ct4_41opt1)/3;
+           }
+           else if(($ct2_41opt1 > $ct1_41opt1) && ($ct2_41opt1 > $ct4_41opt1) && ($ct3_41opt1 > $ct1_41opt1) && ($ct3_41opt1 > $ct4_41opt1) && ($ct1_41opt1 == $ct4_41opt1)){
+               $avg_41opt1 = ($ct1_41opt1+$ct2_41opt1+$ct3_41opt1)/3;
+           }
+           else if(($ct2_41opt1 > $ct1_41opt1) && ($ct2_41opt1 > $ct3_41opt1) && ($ct4_41opt1 > $ct1_41opt1) && ($ct4_41opt1 > $ct3_41opt1) && ($ct1_41opt1 == $ct3_41opt1)){
+               $avg_41opt1 = ($ct1_41opt1+$ct2_41opt1+$ct4_41opt1)/3;
+           }
+           else if(($ct3_41opt1 > $ct1_41opt1) && ($ct3_41opt1 > $ct2_41opt1) && ($ct4_41opt1 > $ct1_41opt1) && ($ct4_41opt1 > $ct2_41opt1) && ($ct1_41opt1 == $ct2_41opt1)){
+               $avg_41opt1 = ($ct1_41opt1+$ct3_41opt1+$ct4_41opt1)/3;
+           }
+           else if(($ct1_41opt1 > $ct4_41opt1) && ($ct2_41opt1 > $ct4_41opt1) && ($ct3_41opt1 > $ct4_41opt1)){
+               $avg_41opt1 = ($ct1_41opt1+$ct2_41opt1+$ct3_41opt1)/3;
+           }
+           else if(($ct1_41opt1 > $ct3_41opt1) && ($ct2_41opt1 > $ct3_41opt1) && ($ct4_41opt1 > $ct3_41opt1 )){
+               $avg_41opt1 = ($ct1_41opt1+$ct2_41opt1+$ct4_41opt1)/3;
+           }
+           else if(($ct1_41opt1 > $ct2_41opt1) && ($ct3_41opt1 > $ct2_41opt1) && ($ct4_41opt1 > $ct2_41opt1) ){
+               $avg_41opt1 = ($ct1_41opt1+$ct3_41opt1+$ct4_41opt1)/3;
+           }
+           else if(($ct2_41opt1 > $ct1_41opt1) && ($ct3_41opt1 > $ct1_41opt1) && ($ct4_41opt1 > $ct1_41opt1)){
+               $avg_41opt1 = ($ct2_41opt1+$ct3_41opt1+$ct4_41opt1)/3;
+           }
+           else if($ct1_41opt1==$ct2_41opt1 && $ct2_41opt1==$ct3_41opt1 && $ct3_41opt1==$ct4_41opt1){
+               $avg_41opt1 = ($ct1_41opt1+$ct2_41opt1+$ct3_41opt1)/3;
+           }
+           else if(($ct1_41opt1 > $ct2_41opt1) && ($ct2_41opt1 > $ct3_41opt1) && ($ct3_41opt1 > $ct4_41opt1)){
+               $avg_41opt1 = ($ct1_41opt1+$ct2_41opt1+$ct3_41opt1)/3;
+           }
+           else if(($ct2_41opt1 > $ct3_41opt1) && ($ct3_41opt1 > $ct4_41opt1) && ($ct4_41opt1 > $ct1_41opt1)){
+               $avg_41opt1 = ($ct2_41opt1+$ct3_41opt1+$ct4_41opt1)/3;
+           }
+           else if(($ct3_41opt1 > $ct4_41opt1) && ($ct4_41opt1 > $ct1_41opt1) && ($ct1_41opt1 > $ct2_41opt1)){
+               $avg_41opt1 = ($ct1_41opt1+$ct3_41opt1+$ct4_41opt1)/3;
+           }
+           else if(($ct4_41opt1 > $ct1_41opt1) && ($ct1_41opt1 > $ct2_41opt1) && ($ct2_41opt1 > $ct3_41opt1)){
+               $avg_41opt1 = ($ct1_41opt1+$ct2_41opt1+$ct4_41opt1)/3;
+           }
+           else if(($ct1_41opt1 > $ct2_41opt1) && ($ct1_41opt1 > $ct3_41opt1) && ($ct1_41opt1 > $ct4_41opt1) && ($ct2_41opt1==$ct3_41opt1) && ($ct3_41opt1==$ct4_41opt1)){
+               $avg_41opt1 = ($ct1_41opt1+$ct2_41opt1+$ct3_41opt1)/3;
+           }
+           else if(($ct2_41opt1 > $ct3_41opt1) && ($ct2_41opt1 > $ct4_41opt1) && ($ct2_41opt1 > $ct1_41opt1) && ($ct3_41opt1==$ct4_41opt1) && ($ct4_41opt1==$ct1_41opt1)){
+               $avg_41opt1 = ($ct1_41opt1+$ct2_41opt1+$ct3_41opt1)/3;
+           }
+           else if(($ct3_41opt1 > $ct1_41opt1) && ($ct3_41opt1 > $ct2_41opt1) && ($ct3_41opt1 > $ct4_41opt1) && ($ct1_41opt1==$ct2_41opt1) && ($ct2_41opt1==$ct4_41opt1)){
+               $avg_41opt1 = ($ct3_41opt1+$ct2_41opt1+$ct4_41opt1)/3;
+           }
+           else if(($ct4_41opt1 > $ct1_41opt1) && ($ct4_41opt1 > $ct2_41opt1) && ($ct4_41opt1 > $ct3_41opt1) && ($ct1_41opt1==$ct2_41opt1) && ($ct2_41opt1==$ct3_41opt1)){
+               $avg_41opt1 = ($ct1_41opt1+$ct2_41opt1+$ct4_41opt1)/3;
+           }
+
+
+
+           $res41opt1 = $avg_41opt1+$att41opt1+$exam_41opt1;
+
+           //echo '<br>';
+
+           // echo $res41opt1;
+
+           //echo '<br>';
+
+           if($res41opt1>=0 && $res41opt1<=39){
+               $gp41opt1 = 0.00;
+           }
+           else if($res41opt1>39 && $res41opt1<=44){
+               $gp41opt1 = 2.00;
+           }
+           else if($res41opt1>44 && $res41opt1<=49){
+               $gp41opt1 = 2.25;
+           }
+           else if($res41opt1>49 && $res41opt1<=54){
+               $gp41opt1 = 2.50;
+           }
+           else if($res41opt1>54 && $res41opt1<=59){
+               $gp41opt1 = 2.75;
+           }
+           else if($res41opt1>59 && $res41opt1<=64){
+               $gp41opt1 = 3.00;
+           }
+           else if($res41opt1>64 && $res41opt1<=69){
+               $gp41opt1 = 3.25;
+           }
+           else if($res41opt1>69 && $res41opt1<=74){
+               $gp41opt1 = 3.50;
+           }
+           else if($res41opt1>74 && $res41opt1<=79){
+               $gp41opt1 = 3.75;
+           }
+           else if($res41opt1>79){
+               $gp41opt1 = 4.00;
+           }
+
+           // echo '<br>';
+
+           // echo $gp41opt1;
+
+
+
+           //theory ece 41opt1 ends
+
+
+
+
+           // echo '<br>';
+
+
+
+
+           // theory ece 41opt2 starts
+
+
+           $ct1_41opt2 = $row['ece_41opt2_ct1'];
+           $ct2_41opt2 = $row['ece_41opt2_ct2'];
+           $ct3_41opt2 = $row['ece_41opt2_ct3'];
+           $ct4_41opt2 = $row['ece_41opt2_ct4'];
+           $att41opt2 = $row['ece_41opt2_att'];
+           $exam_41opt2 = $row['ece_41opt2_exam'];
+
+
+
+           if($ct1_41opt2==0){
+               $avg_41opt2 = ($ct2_41opt2+$ct3_41opt2+$ct4_41opt2)/3;
+           }
+           else if($ct2_41opt2==0){
+               $avg_41opt2 = ($ct1_41opt2+$ct3_41opt2+$ct4_41opt2)/3;
+           }
+           else if($ct3_41opt2==0){
+               $avg_41opt2 = ($ct2_41opt2+$ct1_41opt2+$ct4_41opt2)/3;
+           }
+           else if($ct4_41opt2==0){
+               $avg_41opt2 = ($ct2_41opt2+$ct3_41opt2+$ct1_41opt2)/3;
+           }
+           else if($ct1_41opt2==0 && $ct2_41opt2==0){
+               $avg_41opt2 = ($ct3_41opt2+$ct4_41opt2)/3;
+           }
+           else if($ct1_41opt2==0 && $ct3_41opt2==0){
+               $avg_41opt2 = ($ct2_41opt2+$ct4_41opt2)/3;
+           }
+           else if($ct1_41opt2==0 && $ct4_41opt2==0){
+               $avg_41opt2 = ($ct2_41opt2+$ct3_41opt2)/3;
+           }
+           else if($ct2_41opt2==0 && $ct3_41opt2==0){
+               $avg_41opt2 = ($ct1_41opt2+$ct4_41opt2)/3;
+           }
+           else if($ct2_41opt2==0 && $ct4_41opt2==0){
+               $avg_41opt2 = ($ct1_41opt2+$ct3_41opt2)/3;
+           }
+           else if($ct3_41opt2==0 && $ct4_41opt2==0){
+               $avg_41opt2 = ($ct1_41opt2+$ct2_41opt2)/3;
+           }
+           else if($ct1_41opt2==0 && $ct2_41opt2==0 && $ct3_41opt2==0){
+               $avg_41opt2 = $ct4_41opt2/3;
+           }
+           else if($ct1_41opt2==0 && $ct2_41opt2==0 && $ct4_41opt2==0){
+               $avg_41opt2 = $ct3_41opt2/3;
+           }
+           else if($ct1_41opt2==0 && $ct3_41opt2==0 && $ct4_41opt2==0){
+               $avg_41opt2 = $ct2_41opt2/3;
+           }
+           else if($ct2_41opt2==0 && $ct3_41opt2==0 && $ct4_41opt2==0){
+               $avg_41opt2 = $ct1_41opt2/3;
+           }
+           else if($ct1_41opt2==0 && $ct2_41opt2==0 && $ct3_41opt2==0 && $ct4_41opt2==0){
+               $avg_41opt2 = 0;
+           }
+           else if(($ct1_41opt2 > $ct3_41opt2) && ($ct1_41opt2 > $ct4_41opt2) && ($ct2_41opt2 > $ct3_41opt2) && ($ct2_41opt2 > $ct4_41opt2) && ($ct3_41opt2 == $ct4_41opt2)){
+               $avg_41opt2 = ($ct1_41opt2+$ct2_41opt2+$ct3_41opt2)/3;
+           }
+           else if(($ct1_41opt2 > $ct2_41opt2) && ($ct1_41opt2 > $ct4_41opt2) && ($ct3_41opt2 > $ct2_41opt2) && ($ct3_41opt2 > $ct4_41opt2) && ($ct2_41opt2 == $ct4_41opt2)){
+               $avg_41opt2 = ($ct1_41opt2+$ct2_41opt2+$ct3_41opt2)/3;
+           }
+           else if(($ct1_41opt2 > $ct2_41opt2) && ($ct1_41opt2 > $ct3_41opt2) && ($ct4_41opt2 > $ct2_41opt2) && ($ct4_41opt2 > $ct3_41opt2) && ($ct2_41opt2 == $ct3_41opt2)){
+               $avg_41opt2 = ($ct1_41opt2+$ct2_41opt2+$ct4_41opt2)/3;
+           }
+           else if(($ct2_41opt2 > $ct1_41opt2) && ($ct2_41opt2 > $ct4_41opt2) && ($ct3_41opt2 > $ct1_41opt2) && ($ct3_41opt2 > $ct4_41opt2) && ($ct1_41opt2 == $ct4_41opt2)){
+               $avg_41opt2 = ($ct1_41opt2+$ct2_41opt2+$ct3_41opt2)/3;
+           }
+           else if(($ct2_41opt2 > $ct1_41opt2) && ($ct2_41opt2 > $ct3_41opt2) && ($ct4_41opt2 > $ct1_41opt2) && ($ct4_41opt2 > $ct3_41opt2) && ($ct1_41opt2 == $ct3_41opt2)){
+               $avg_41opt2 = ($ct1_41opt2+$ct2_41opt2+$ct4_41opt2)/3;
+           }
+           else if(($ct3_41opt2 > $ct1_41opt2) && ($ct3_41opt2 > $ct2_41opt2) && ($ct4_41opt2 > $ct1_41opt2) && ($ct4_41opt2 > $ct2_41opt2) && ($ct1_41opt2 == $ct2_41opt2)){
+               $avg_41opt2 = ($ct1_41opt2+$ct3_41opt2+$ct4_41opt2)/3;
+           }
+           else if(($ct1_41opt2 > $ct4_41opt2) && ($ct2_41opt2 > $ct4_41opt2) && ($ct3_41opt2 > $ct4_41opt2)){
+               $avg_41opt2 = ($ct1_41opt2+$ct2_41opt2+$ct3_41opt2)/3;
+           }
+           else if(($ct1_41opt2 > $ct3_41opt2) && ($ct2_41opt2 > $ct3_41opt2) && ($ct4_41opt2 > $ct3_41opt2 )){
+               $avg_41opt2 = ($ct1_41opt2+$ct2_41opt2+$ct4_41opt2)/3;
+           }
+           else if(($ct1_41opt2 > $ct2_41opt2) && ($ct3_41opt2 > $ct2_41opt2) && ($ct4_41opt2 > $ct2_41opt2) ){
+               $avg_41opt2 = ($ct1_41opt2+$ct3_41opt2+$ct4_41opt2)/3;
+           }
+           else if(($ct2_41opt2 > $ct1_41opt2) && ($ct3_41opt2 > $ct1_41opt2) && ($ct4_41opt2 > $ct1_41opt2)){
+               $avg_41opt2 = ($ct2_41opt2+$ct3_41opt2+$ct4_41opt2)/3;
+           }
+           else if($ct1_41opt2==$ct2_41opt2 && $ct2_41opt2==$ct3_41opt2 && $ct3_41opt2==$ct4_41opt2){
+               $avg_41opt2 = ($ct1_41opt2+$ct2_41opt2+$ct3_41opt2)/3;
+           }
+           else if(($ct1_41opt2 > $ct2_41opt2) && ($ct2_41opt2 > $ct3_41opt2) && ($ct3_41opt2 > $ct4_41opt2)){
+               $avg_41opt2 = ($ct1_41opt2+$ct2_41opt2+$ct3_41opt2)/3;
+           }
+           else if(($ct2_41opt2 > $ct3_41opt2) && ($ct3_41opt2 > $ct4_41opt2) && ($ct4_41opt2 > $ct1_41opt2)){
+               $avg_41opt2 = ($ct2_41opt2+$ct3_41opt2+$ct4_41opt2)/3;
+           }
+           else if(($ct3_41opt2 > $ct4_41opt2) && ($ct4_41opt2 > $ct1_41opt2) && ($ct1_41opt2 > $ct2_41opt2)){
+               $avg_41opt2 = ($ct1_41opt2+$ct3_41opt2+$ct4_41opt2)/3;
+           }
+           else if(($ct4_41opt2 > $ct1_41opt2) && ($ct1_41opt2 > $ct2_41opt2) && ($ct2_41opt2 > $ct3_41opt2)){
+               $avg_41opt2 = ($ct1_41opt2+$ct2_41opt2+$ct4_41opt2)/3;
+           }
+           else if(($ct1_41opt2 > $ct2_41opt2) && ($ct1_41opt2 > $ct3_41opt2) && ($ct1_41opt2 > $ct4_41opt2) && ($ct2_41opt2==$ct3_41opt2) && ($ct3_41opt2==$ct4_41opt2)){
+               $avg_41opt2 = ($ct1_41opt2+$ct2_41opt2+$ct3_41opt2)/3;
+           }
+           else if(($ct2_41opt2 > $ct3_41opt2) && ($ct2_41opt2 > $ct4_41opt2) && ($ct2_41opt2 > $ct1_41opt2) && ($ct3_41opt2==$ct4_41opt2) && ($ct4_41opt2==$ct1_41opt2)){
+               $avg_41opt2 = ($ct1_41opt2+$ct2_41opt2+$ct3_41opt2)/3;
+           }
+           else if(($ct3_41opt2 > $ct1_41opt2) && ($ct3_41opt2 > $ct2_41opt2) && ($ct3_41opt2 > $ct4_41opt2) && ($ct1_41opt2==$ct2_41opt2) && ($ct2_41opt2==$ct4_41opt2)){
+               $avg_41opt2 = ($ct3_41opt2+$ct2_41opt2+$ct4_41opt2)/3;
+           }
+           else if(($ct4_41opt2 > $ct1_41opt2) && ($ct4_41opt2 > $ct2_41opt2) && ($ct4_41opt2 > $ct3_41opt2) && ($ct1_41opt2==$ct2_41opt2) && ($ct2_41opt2==$ct3_41opt2)){
+               $avg_41opt2 = ($ct1_41opt2+$ct2_41opt2+$ct4_41opt2)/3;
+           }
+
+
+
+           $res41opt2 = $avg_41opt2+$att41opt2+$exam_41opt2;
+
+           //echo '<br>';
+
+           // echo $res41opt2;
+
+           //echo '<br>';
+
+           if($res41opt2>=0 && $res41opt2<=39){
+               $gp41opt2 = 0.00;
+           }
+           else if($res41opt2>39 && $res41opt2<=44){
+               $gp41opt2 = 2.00;
+           }
+           else if($res41opt2>44 && $res41opt2<=49){
+               $gp41opt2 = 2.25;
+           }
+           else if($res41opt2>49 && $res41opt2<=54){
+               $gp41opt2 = 2.50;
+           }
+           else if($res41opt2>54 && $res41opt2<=59){
+               $gp41opt2 = 2.75;
+           }
+           else if($res41opt2>59 && $res41opt2<=64){
+               $gp41opt2 = 3.00;
+           }
+           else if($res41opt2>64 && $res41opt2<=69){
+               $gp41opt2 = 3.25;
+           }
+           else if($res41opt2>69 && $res41opt2<=74){
+               $gp41opt2 = 3.50;
+           }
+           else if($res41opt2>74 && $res41opt2<=79){
+               $gp41opt2 = 3.75;
+           }
+           else if($res41opt2>79){
+               $gp41opt2 = 4.00;
+           }
+
+           //echo '<br>';
+
+           // echo $gp41opt2;
+
+
+
+           //theory ece 41opt2 ends
+
+
+
+
+           //  echo '<br>';
+           //  echo '<br>';
+           //  echo '<br>';
+           //  echo '<br>';
+           //  echo '<br>';
+
+
+
+           // sessional ece 4124 starts
+
+
+           $att4124 = $row['ece_4124_att'];
+           $report4124 = $row['ece_4124_re'];
+           $quiz4124 = $row['ece_4124_quiz'];
+           $bv4124 = $row['ece_4124_bv'];
+
+           $res4124 = $att4124+$report4124+$quiz4124+$bv4124;
+
+           //echo '<br>';
+
+           // echo $res4124;
+
+           //echo '<br>';
+
+           if($res4124>=0 && $res4124<=39){
+               $gp4124 = 0.00;
+           }
+           else if($res4124>=40 && $res4124<=44){
+               $gp4124 = 2.00;
+           }
+           else if($res4124>=45 && $res4124<=49){
+               $gp4124 = 2.25;
+           }
+           else if($res4124>=50 && $res4124<=54){
+               $gp4124 = 2.50;
+           }
+           else if($res4124>=55 && $res4124<=59){
+               $gp4124 = 2.75;
+           }
+           else if($res4124>=60 && $res4124<=64){
+               $gp4124 = 3.00;
+           }
+           else if($res4124>=65 && $res4124<=69){
+               $gp4124 = 3.25;
+           }
+           else if($res4124>=70 && $res4124<=74){
+               $gp4124 = 3.50;
+           }
+           else if($res4124>=75 && $res4124<=79){
+               $gp4124 = 3.75;
+           }
+           else if($res4124>=80){
+               $gp4124 = 4.00;
+           }
+
+           //echo '<br>';
+
+           // echo $gp4124;
+
+
+           // sessional ece 4124 ends
+
+
+
+           //echo '<br>';
+
+
+
+           // sessional ece 41 starts
+
+
+           $att41opt1lab = $row['ece_41opt1_attlab'];
+           $report41opt1 = $row['ece_41opt1_re'];
+           $quiz41opt1 = $row['ece_41opt1_quiz'];
+           $bv41opt1 = $row['ece_41opt1_bv'];
+
+           $res41opt1lab = $att41opt1lab+$report41opt1+$quiz41opt1+$bv41opt1;
+
+           //echo '<br>';
+
+           // echo $res41opt1;
+
+           //echo '<br>';
+
+           if($res41opt1lab>=0 && $res41opt1lab<=39){
+               $gp41opt1lab = 0.00;
+           }
+           else if($res41opt1lab>=40 && $res41opt1lab<=44){
+               $gp41opt1lab = 2.00;
+           }
+           else if($res41opt1lab>=45 && $res41opt1lab<=49){
+               $gp41opt1lab = 2.25;
+           }
+           else if($res41opt1lab>=50 && $res41opt1lab<=54){
+               $gp41opt1lab = 2.50;
+           }
+           else if($res41opt1lab>=55 && $res41opt1lab<=59){
+               $gp41opt1lab = 2.75;
+           }
+           else if($res41opt1lab>=60 && $res41opt1lab<=64){
+               $gp41opt1lab = 3.00;
+           }
+           else if($res41opt1lab>=65 && $res41opt1lab<=69){
+               $gp41opt1lab = 3.25;
+           }
+           else if($res41opt1lab>=70 && $res41opt1lab<=74){
+               $gp41opt1lab = 3.50;
+           }
+           else if($res41opt1lab>=75 && $res41opt1lab<=79){
+               $gp41opt1lab = 3.75;
+           }
+           else if($res41opt1lab>=80){
+               $gp41opt1lab = 4.00;
+           }
+
+           //echo '<br>';
+
+           // echo $gp41opt1lab;
+
+
+           // sessional ece 41opt1 ends
+
+           //echo '<br>';
+
+
+           // sessional ece 41opt2 starts
+
+
+           $att41opt2lab = $row['ece_41opt2_attlab'];
+           $report41opt2 = $row['ece_41opt2_re'];
+           $quiz41opt2 = $row['ece_41opt2_quiz'];
+           $bv41opt2 = $row['ece_41opt2_bv'];
+
+           $res41opt2lab = $att41opt2lab+$report41opt2+$quiz41opt2+$bv41opt2;
+
+           //echo '<br>';
+
+           // echo $res41opt2lab;
+
+           //echo '<br>';
+
+           if($res41opt2lab>=0 && $res41opt2lab<=39){
+               $gp41opt2lab = 0.00;
+           }
+           else if($res41opt2lab>=40 && $res41opt2lab<=44){
+               $gp41opt2lab = 2.00;
+           }
+           else if($res41opt2lab>=45 && $res41opt2lab<=49){
+               $gp41opt2lab = 2.25;
+           }
+           else if($res41opt2lab>=50 && $res41opt2lab<=54){
+               $gp41opt2lab = 2.50;
+           }
+           else if($res41opt2lab>=55 && $res41opt2lab<=59){
+               $gp41opt2lab = 2.75;
+           }
+           else if($res41opt2lab>=60 && $res41opt2lab<=64){
+               $gp41opt2lab = 3.00;
+           }
+           else if($res41opt2lab>=65 && $res41opt2lab<=69){
+               $gp41opt2lab = 3.25;
+           }
+           else if($res41opt2lab>=70 && $res41opt2lab<=74){
+               $gp41opt2lab = 3.50;
+           }
+           else if($res41opt2lab>=75 && $res41opt2lab<=79){
+               $gp41opt2lab = 3.75;
+           }
+           else if($res41opt2lab>=80){
+               $gp41opt2lab = 4.00;
+           }
+
+           //echo '<br>';
+
+           // echo $gp41opt2lab;
+
+
+           // sessional ece 41opt2 ends
+
+
+
+                      // Industrial training 4100 starts
+
+                      $res4100 = $row['ece_4100_ind'];
+
+                      //echo '<br>';
+
+                      // echo $res4100;
+
+                      //echo '<br>';
+
+                      if($res4100>=0 && $res4100<=39){
+                          $gp4100 = 0.00;
+                      }
+                      else if($res4100>=40 && $res4100<=44){
+                          $gp4100 = 2.00;
+                      }
+                      else if($res4100>=45 && $res4100<=49){
+                          $gp4100 = 2.25;
+                      }
+                      else if($res4100>=50 && $res4100<=54){
+                          $gp4100 = 2.50;
+                      }
+                      else if($res4100>=55 && $res4100<=59){
+                          $gp4100 = 2.75;
+                      }
+                      else if($res4100>=60 && $res4100<=64){
+                          $gp4100 = 3.00;
+                      }
+                      else if($res4100>=65 && $res4100<=69){
+                          $gp4100 = 3.25;
+                      }
+                      else if($res4100>=70 && $res4100<=74){
+                          $gp4100 = 3.50;
+                      }
+                      else if($res4100>=75 && $res4100<=79){
+                          $gp4100 = 3.75;
+                      }
+                      else if($res4100>=80){
+                          $gp4100 = 4.00;
+                      }
+
+                      // echo '<br>';
+
+                      // echo $gp4100;
+
+                      // echo '<br>';
+                      // echo '<br>';
+                      // echo '<br>';
+
+
+                      // Industrial training 4100 ends
+
+
+
+
+           // seminar 4122 starts
+
+        $res4122 = $row['ece_4122_sem'];
+
+        //echo '<br>';
+
+        // echo $res4122;
+
+        //echo '<br>';
+
+        if($res4122>=0 && $res4122<=39){
+            $gp4122 = 0.00;
+        }
+        else if($res4122>=40 && $res4122<=44){
+            $gp4122 = 2.00;
+        }
+        else if($res4122>=45 && $res4122<=49){
+            $gp4122 = 2.25;
+        }
+        else if($res4122>=50 && $res4122<=54){
+            $gp4122 = 2.50;
+        }
+        else if($res4122>=55 && $res4122<=59){
+            $gp4122 = 2.75;
+        }
+        else if($res4122>=60 && $res4122<=64){
+            $gp4122 = 3.00;
+        }
+        else if($res4122>=65 && $res4122<=69){
+            $gp4122 = 3.25;
+        }
+        else if($res4122>=70 && $res4122<=74){
+            $gp4122 = 3.50;
+        }
+        else if($res4122>=75 && $res4122<=79){
+            $gp4122 = 3.75;
+        }
+        else if($res4122>=80){
+            $gp4122 = 4.00;
+        }
+
+        // echo '<br>';
+
+        // echo $gp4122;
+
+        // echo '<br>';
+        // echo '<br>';
+        // echo '<br>';
+
+
+        // seminar 4122 ends
+
+
+
+
+
+           // echo '<br>';
+           // echo '<br>';
+           // echo '<br>';
+           // echo '<br>';
+           // echo '<br>';
+
+
+
+
+
+
+           // project-1 4000 starts
+
+         $res4000pro1 = $row['ece_4000_pro1'];
+
+         //echo '<br>';
+
+         // echo $res4000pro1;
+
+         //echo '<br>';
+
+         if($res4000pro1>=0 && $res4000pro1<=39){
+             $gp4000pro1 = 0.00;
+         }
+         else if($res4000pro1>=40 && $res4000pro1<=44){
+             $gp4000pro1 = 2.00;
+         }
+         else if($res4000pro1>=45 && $res4000pro1<=49){
+             $gp4000pro1 = 2.25;
+         }
+         else if($res4000pro1>=50 && $res4000pro1<=54){
+             $gp4000pro1 = 2.50;
+         }
+         else if($res4000pro1>=55 && $res4000pro1<=59){
+             $gp4000pro1 = 2.75;
+         }
+         else if($res4000pro1>=60 && $res4000pro1<=64){
+             $gp4000pro1 = 3.00;
+         }
+         else if($res4000pro1>=65 && $res4000pro1<=69){
+             $gp4000pro1 = 3.25;
+         }
+         else if($res4000pro1>=70 && $res4000pro1<=74){
+             $gp4000pro1 = 3.50;
+         }
+         else if($res4000pro1>=75 && $res4000pro1<=79){
+             $gp4000pro1 = 3.75;
+         }
+         else if($res4000pro1>=80){
+             $gp4000pro1 = 4.00;
+         }
+
+         // echo '<br>';
+
+         // echo $gp4000pro1;
+
+         // echo '<br>';
+         // echo '<br>';
+         // echo '<br>';
+
+
+         // project-1 4000 ends
+
+
+
+           echo '<br>';
+
+           $gpa41 =  (($gp4109+ $gp4123+ $gp4121+ $gp41opt2+ $gp41opt1)*3 + ($gp4124*1.5) + ($gp41opt1lab*0.75 + $gp41opt2lab*0.75) + ($gp4100*1.00) + ($gp4122*0.75) + ($gp4000pro1*1.50))/21.25;
+
+           $format_gpa41 = number_format($gpa41, 2);
+
+
+
+
+
+
+           ?>
+
+          <div class="resflex">
+               <div>Roll: <?php echo $row['roll41']; ?></div>
+               <div>GPA: <?php echo $format_gpa41?></div>
+               <div>CGPA: <?php
+
+               // echo $format_gpa11;
+
+               // echo '<br>';
+
+               // echo $format_gpa21;
+
+               // echo '<br>';
+
+               $cgpa41 = ($format_gpa11 + $format_gpa12 + $format_gpa21 + $format_gpa22 + $format_gpa31 + $format_gpa32 + $format_gpa41)/7;
+
+               $format_cgpa41 = number_format($cgpa41, 2);
+
+               echo $format_cgpa41;
+
+
+
+               ?></div>
+           </div>
+
+           <br>
+           <br>
+
+
+
+<?php
+ }
+?>
+
+<!-- Result 4-1 Ends -->
+
+
