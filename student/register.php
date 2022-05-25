@@ -73,7 +73,6 @@ if(isset($_POST['add-student'])){
   $roll = $_POST['roll'];
   $city = $_POST['city'];
   $contact = $_POST['contact'];
-  $class = $_POST['class'];
   $email = $_POST['email'];
   $username = $_POST['username'];
   $password = $_POST['password'];
@@ -121,10 +120,6 @@ if(isset($_POST['add-student'])){
     $input_error['contact'] = "The Contact field is required.";
   }
 
-  if(empty($class)){
-    $input_error['class'] = "The Class field is required.";
-  }
-
   if(empty($email)){
     $input_error['email'] = "The Email field is required.";
   }
@@ -152,7 +147,7 @@ if(isset($_POST['add-student'])){
                if($password == $c_password){
                  $password=md5($password);
   
-                 $query = "INSERT INTO `student_info`(`name`, `roll`, `class`, `city`, `contact`, `email`, `username`, `password`, `photo`, `status`, `otp`) VALUES ('$name', '$roll', '$class', '$city', '$contact', '$email', '$username', '$password', '$picture_name', 'inactive', '$body')";
+                 $query = "INSERT INTO `student_info`(`name`, `roll`, `city`, `contact`, `email`, `username`, `password`, `photo`, `status`, `otp`) VALUES ('$name', '$roll', '$city', '$contact', '$email', '$username', '$password', '$picture_name', 'inactive', '$body')";
                  $result = mysqli_query($link, $query);
 
   if($result){
@@ -226,17 +221,6 @@ $email_error = "This Email Address Already Exists";
         </div>
 
         <div class="form-group">
-          <label for="class">Class</label>
-          <select id="class" class="form-control" name="class" required="" >
-            <option value="">Select</option>
-            <option value="1st">1st</option>
-            <option value="2nd">2nd</option>
-            <option value="3rd">3rd</option>
-            <option value="4th">4th</option>
-          </select>
-        </div>
-
-        <div class="form-group">
           <label for="email">Email</label>
           <input class="form-control"  id="email" type="email" name="email" placeholder="Email" required="" >
         </div>
@@ -272,7 +256,7 @@ $email_error = "This Email Address Already Exists";
 
 
 <footer class="footer-area">
-			<p>Copyright &COPY; 2021 S.M. Faizul Islam Fair</p>
+			<p>Copyright &COPY; 2022 S.M. Faizul Islam Fair</p>
 		</footer>
 
 

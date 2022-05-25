@@ -861,7 +861,7 @@ foreach($rows as $row){
 
 
     <footer style="width:100%; height:75px; background: #2887e6; bottom:0; text-align:center; margin-top:188px">
-        <p style="color:white; padding-top:25px; font-size:14px;">Copyright &COPY; 2021 S.M. Faizul Islam Fair</p>
+        <p style="color:white; padding-top:25px; font-size:14px;">Copyright &COPY; 2022 S.M. Faizul Islam Fair</p>
     </footer>
 
     <!-- Optional JavaScript -->

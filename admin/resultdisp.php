@@ -1180,6 +1180,10 @@ while($row = mysqli_fetch_assoc($db_11)){
 
            echo '<br>';
 
+           $gp11 = ($gp1101+ $gp1103+ $gpmath1117+ $gphum1117+ $gpphy1117)*3 + ($gp1102*1.5) + ($gp1104*1.5 + $gphum1118*0.75 + $gpphy1118*0.75) + ($gp1100*0.75);
+
+           $format_gp11 = number_format($gp11, 2);
+
            $gpa11 =  (($gp1101+ $gp1103+ $gpmath1117+ $gphum1117+ $gpphy1117)*3 + ($gp1102*1.5) + ($gp1104*1.5 + $gphum1118*0.75 + $gpphy1118*0.75) + ($gp1100*0.75))/20.25;
 
            $format_gpa11 = number_format($gpa11, 2);
@@ -1195,6 +1199,7 @@ while($row = mysqli_fetch_assoc($db_11)){
 
             <div class="resflex">
                 <div>Roll: <?php echo $row['roll11']; ?></div> 
+                <div>GP: <?php echo $format_gp11 ?></div>
                 <div>GPA: <?php echo $format_gpa11 ?></div>
                 <div>CGPA: <?php echo $format_gpa11  ?></div>
             </div>
@@ -2334,6 +2339,12 @@ while($row = mysqli_fetch_assoc($db_12)){
 
           echo '<br>';
 
+
+          $gp12 =  ($gp1201+ $gp1203+ $gp1205+ $gphum1217+ $gpmath1217)*3 + ($gp1202*0.75) + ($gp1204*1.5 +  $gp1206*0.75) + ($gp1200*1.50);
+
+          $format_gp12 = number_format($gp12, 2);
+
+
           $gpa12 =  (($gp1201+ $gp1203+ $gp1205+ $gphum1217+ $gpmath1217)*3 + ($gp1202*0.75) + ($gp1204*1.5 +  $gp1206*0.75) + ($gp1200*1.50))/19.50;
 
           $format_gpa12 = number_format($gpa12, 2);
@@ -2349,6 +2360,7 @@ while($row = mysqli_fetch_assoc($db_12)){
 
            <div class="resflex">
                <div>Roll: <?php echo $row['roll12']; ?></div>
+               <div>GP: <?php echo $format_gp12 ?></div>
                <div>GPA: <?php echo $format_gpa12 ?></div>
                <div>CGPA: <?php
 
@@ -3560,6 +3572,11 @@ while($row = mysqli_fetch_assoc($db_12)){
 
             echo '<br>';
 
+            $gp21 =  ($gp2103+ $gp2107+ $gp2111+ $gpchem2117+ $gpmath2117)*3 + ($gp2104*1.5) + ($gp2108*0.75 + $gp2118*0.75 + $gp2112*0.75) + ($gp2100*0.75);
+
+            $format_gp21 = number_format($gp21, 2);
+
+
             $gpa21 =  (($gp2103+ $gp2107+ $gp2111+ $gpchem2117+ $gpmath2117)*3 + ($gp2104*1.5) + ($gp2108*0.75 + $gp2118*0.75 + $gp2112*0.75) + ($gp2100*0.75))/19.5;
 
             $format_gpa21 = number_format($gpa21, 2);
@@ -3573,6 +3590,7 @@ while($row = mysqli_fetch_assoc($db_12)){
            
            <div class="resflex">
                 <div>Roll: <?php echo $row['roll21']; ?></div> 
+                <div>GP: <?php echo $format_gp21?></div>
                 <div>GPA: <?php echo $format_gpa21?></div>
                 <div>CGPA: <?php
 
@@ -4720,19 +4738,23 @@ while($row = mysqli_fetch_assoc($db_12)){
 
             echo '<br>';
 
-            $gpa22 =  (($gp2205+ $gp2213+ $gp2215+ $gphum2217+ $gpmath2217)*3 + ($gp2206*0.75) + ($gp2214*1.50 + $gp2216*1.50) + ($gp2200*0.75))/19.5;
+            $gp22 =  ($gp2205+ $gp2213+ $gp2215+ $gphum2217+ $gpmath2217)*3 + ($gp2206*0.75) + ($gp2214*1.50 + $gp2216*1.50) + ($gp2200*0.75);
+
+            $format_gp22 = number_format($gp22, 2);
+
+
+            $gpa22 =  (($gp2205+ $gp2213+ $gp2215+ $gphum2217+ $gpmath2217)*3 + ($gp2206*0.75) + ($gp2214*1.50 + $gp2216*1.50) + ($gp2200*0.75))/19.50;
 
             $format_gpa22 = number_format($gpa22, 2);
 
 
 
-
-
-
             ?>
+
 
            <div class="resflex">
                 <div>Roll: <?php echo $row['roll22']; ?></div>
+                <div>GP: <?php echo $format_gp12 ?></div>
                 <div>GPA: <?php echo $format_gpa12 ?></div>
                 <div>CGPA: <?php
 
@@ -5886,6 +5908,11 @@ while($row = mysqli_fetch_assoc($db_12)){
 
             echo '<br>';
 
+            $gp31 =  ($gp3107+ $gp3109+ $gp3111+ $gp3119+ $gp3117)*3 + ($gp3108*0.75) + ($gp3112*1.50 + $gp3118*0.75) + ($gp3100*1.50);
+
+            $format_gp31 = number_format($gp31, 2);
+
+
             $gpa31 =  (($gp3107+ $gp3109+ $gp3111+ $gp3119+ $gp3117)*3 + ($gp3108*0.75) + ($gp3112*1.50 + $gp3118*0.75) + ($gp3100*1.50))/19.5;
 
             $format_gpa31 = number_format($gpa31, 2);
@@ -5899,6 +5926,7 @@ while($row = mysqli_fetch_assoc($db_12)){
 
            <div class="resflex">
                 <div>Roll: <?php echo $row['roll31']; ?></div>
+                <div>GP: <?php echo $format_gp31?></div>
                 <div>GPA: <?php echo $format_gpa31?></div>
                 <div>CGPA: <?php
 
@@ -7112,19 +7140,24 @@ while($row = mysqli_fetch_assoc($db_12)){
 
             echo '<br>';
 
+            $gp32 =  ($gp3205+ $gp3211+ $gp3221+ $gp3219+ $gp3207)*3 + ($gp3206*0.75) + ($gp3212*0.75 + $gp3222*0.75 + $gp3220*0.75) + ($gp3208*1.50);
+
+            $format_gp32 = number_format($gp32, 2);
+
+
             $gpa32 =  (($gp3205+ $gp3211+ $gp3221+ $gp3219+ $gp3207)*3 + ($gp3206*0.75) + ($gp3212*0.75 + $gp3222*0.75 + $gp3220*0.75) + ($gp3208*1.50))/19.5;
 
             $format_gpa32 = number_format($gpa32, 2);
 
 
 
-
-
-
             ?>
+
+
 
            <div class="resflex">
                 <div>Roll: <?php echo $row['roll32']; ?></div>
+                <div>GP: <?php echo $format_gp32?></div>
                 <div>GPA: <?php echo $format_gpa32?></div>
                 <div>CGPA: <?php
 
@@ -8386,6 +8419,11 @@ while($row = mysqli_fetch_assoc($db_12)){
 
            echo '<br>';
 
+           $gp41 =  ($gp4109+ $gp4123+ $gp4121+ $gp41opt2+ $gp41opt1)*3 + ($gp4124*1.5) + ($gp41opt1lab*0.75 + $gp41opt2lab*0.75) + ($gp4100*1.00) + ($gp4122*0.75) + ($gp4000pro1*1.50);
+
+           $format_gp41 = number_format($gp41, 2);
+
+
            $gpa41 =  (($gp4109+ $gp4123+ $gp4121+ $gp41opt2+ $gp41opt1)*3 + ($gp4124*1.5) + ($gp41opt1lab*0.75 + $gp41opt2lab*0.75) + ($gp4100*1.00) + ($gp4122*0.75) + ($gp4000pro1*1.50))/21.25;
 
            $format_gpa41 = number_format($gpa41, 2);
@@ -8399,6 +8437,7 @@ while($row = mysqli_fetch_assoc($db_12)){
 
           <div class="resflex">
                <div>Roll: <?php echo $row['roll41']; ?></div>
+               <div>GP: <?php echo $format_gp41?></div>
                <div>GPA: <?php echo $format_gpa41?></div>
                <div>CGPA: <?php
 
@@ -9612,6 +9651,11 @@ while($row = mysqli_fetch_assoc($db_12)){
 
            echo '<br>';
 
+           $gp42 =  ($gp4211+ $gp4223+ $gp4217+ $gp42opt4+ $gp42opt3)*3 + ($gp4224*0.75) + ($gp42opt3lab*0.75 + $gp42opt4lab*0.75) + ($gp4218*0.75) + ($gp4000pro2*3);
+
+           $format_gp42 = number_format($gp42, 2);
+
+
            $gpa42 =  (($gp4211+ $gp4223+ $gp4217+ $gp42opt4+ $gp42opt3)*3 + ($gp4224*0.75) + ($gp42opt3lab*0.75 + $gp42opt4lab*0.75) + ($gp4218*0.75) + ($gp4000pro2*3))/21.75;
 
            $format_gpa42 = number_format($gpa42, 2);
@@ -9625,6 +9669,7 @@ while($row = mysqli_fetch_assoc($db_12)){
 
           <div class="resflex">
                <div>Roll: <?php echo $row['roll42']; ?></div>
+               <div>GP: <?php echo $format_gp42?></div>
                <div>GPA: <?php echo $format_gpa42?></div>
                <div>CGPA: <?php
 

@@ -5,7 +5,7 @@ require_once './dbcon.php';
 session_start();
 
 if(isset($_SESSION['user_login'])){
-  header('location: systemoredit.php');
+  header('location: index.php');
 }
 
 if(isset($_POST['login'])) {
@@ -27,7 +27,7 @@ if(isset($_POST['login'])) {
     }
 
       $_SESSION['user_login'] = $username;
-      header('location: systemoredit.php');
+      header('location: index.php');
     } else {
       $status_inactive = "Your Status Is Inactive";
     }
@@ -143,7 +143,7 @@ if(isset($_POST['login'])) {
    </div>
 
    <footer style="width:100%; height:80px; background: #2887e6; text-align:center; bottom:0; position:absolute;">
-        <p style="color:white; padding-top:25px; font-size:14px;">Copyright &COPY; 2021 S.M. Faizul Islam Fair</p>
+        <p style="color:white; padding-top:25px; font-size:14px;">Copyright &COPY; 2022 S.M. Faizul Islam Fair</p>
    </footer>
 
   </body>

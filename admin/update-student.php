@@ -12,12 +12,11 @@ if(isset($_POST['update-student'])){
   $roll = $_POST['roll'];
   $city = $_POST['city'];
   $contact = $_POST['contact'];
-  $class = $_POST['class'];
   $email = $_POST['email'];
   $username = $_POST['username'];
   $status = $_POST['status'];
 
-  $query = "UPDATE `student_info` SET `name` = '$name' ,`roll` = '$roll' ,`class` = '$class' ,`city` = '$city' ,`contact` = '$contact', `email` = '$email', `username` = '$username', `status` = '$status' WHERE `id` = '$id'";
+  $query = "UPDATE `student_info` SET `name` = '$name' ,`roll` = '$roll', `city` = '$city' ,`contact` = '$contact', `email` = '$email', `username` = '$username', `status` = '$status' WHERE `id` = '$id'";
   $result = mysqli_query($link, $query);
 
   if($result){
@@ -62,17 +61,6 @@ $db_row = mysqli_fetch_assoc($db_data);
         <div class="form-group">
           <label for="contact">Contact</label>
           <input type="text" name="contact" placeholder="01*********" id="contact" class="form-control" pattern="01[1|3|5|6|7|8|9][0-9]{8}" required="" value="<?= $db_row['contact'] ?>" >
-        </div>
-
-        <div class="form-group">
-          <label for="class">Class</label>
-          <select id="class" class="form-control" name="class" required="" >
-            <option value="">Select</option>
-            <option <?php echo $db_row['class']=='1st' ? 'selected=""':''; ?> value="1st">1st</option>
-            <option <?php echo $db_row['class']=='2nd' ? 'selected=""':''; ?> value="2nd">2nd</option>
-            <option <?php echo $db_row['class']=='3rd' ? 'selected=""':''; ?> value="3rd">3rd</option>
-            <option <?php echo $db_row['class']=='4th' ? 'selected=""':''; ?> value="4th">4th</option>
-          </select>
         </div>
 
         <div class="form-group">

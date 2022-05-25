@@ -119,7 +119,7 @@ a:hover{
    </header>
 
      <br> <br>
-     <a href="../"><input style="transform:translateX(-25px); float:right;" value="Back" class="btn btn-primary"></a>
+     <a href="../"><button style="transform:translateX(-25px); float:right;" class="btn btn-primary">Back</button></a>
      <h1 class="text-center">Student Login</h1>
 
 
@@ -146,7 +146,6 @@ a:hover{
            <a href="register.php"><input style="transform:translateX(40px); float:right;" value="Register" class="btn btn-primary"></a>
            </div>
            <br>
-           <a style="color: #2155c5;" target="_blank" href="forgot.php">Forgot password?</a>
          </form>
          </div>
       </div>
@@ -161,7 +160,7 @@ a:hover{
    </div>
 
    <footer style="width:100%; height:75px; background: #2887e6; text-align:center; bottom:0; position:absolute;">
-      <p style="color:white; padding-top:25px; font-size:14px;">Copyright &COPY; 2021 S.M. Faizul Islam Fair</p>
+      <p style="color:white; padding-top:25px; font-size:14px;">Copyright &COPY; 2022 S.M. Faizul Islam Fair</p>
     </footer>
   </body>
 </html>

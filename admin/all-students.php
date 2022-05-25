@@ -12,7 +12,6 @@
 				<th>Photo</th>
 				<th>Name</th>
 				<th>Roll</th>
-				<th>Class</th>
 				<th>City</th>
 				<th>Contact</th>
 				<th>Email</th>
@@ -36,7 +35,6 @@
 				<td><img style="width: 50px; height: 50px; border-radius: 50%;" src="student_images/<?php echo $row['photo']; ?>" alt="Student's Image"></td>
 				<td style="padding-top:15px;"><?php echo ucwords($row['name']); ?></td>
 				<td style="padding-top:15px;"><?php echo $row['roll']; ?></td>
-				<td style="padding-top:15px;"><?php echo $row['class']; ?></td>
 			    <td style="padding-top:15px;"><?php echo ucwords($row['city']); ?></td>
 				<td style="padding-top:15px;"><?php echo $row['contact']; ?></td>
 			    <td style="padding-top:15px;"><?php echo $row['email']; ?></td>

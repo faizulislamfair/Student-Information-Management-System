@@ -94,7 +94,7 @@ header('location: login.php');
 		
 
 		<footer class="footer-area">
-			<p>Copyright &COPY; 2021 S.M. Faizul Islam Fair</p>
+			<p>Copyright &COPY; 2022 S.M. Faizul Islam Fair</p>
 		</footer>
 
 
