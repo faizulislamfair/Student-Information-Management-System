@@ -61,12 +61,6 @@
 			</a>
 	 </div>
 
-	 <div class="box">
-			<a href="index.php?page=resultdisp">
-				<i class="fas fa-user-graduate"></i> <br>
-				<h5 style="font-size: 18px;">Result</h5>
-			</a>
-	 </div>
 
 	 </div>
 
