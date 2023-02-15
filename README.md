@@ -10,7 +10,7 @@
 
 * As the name says this project is about students, their information and management.
 
-* CGPA has been dynamically calculated for all the eight semesters individually from class tests (marks taken from 4 class tests through input fields and average mark is determined for best three class tests), attendance, semester final, lab course, quiz, report, board viva and project/thesis/shop practice marks.
+* CGPA has been dynamically calculated for all the eight semesters individually from class tests (marks taken from 4 class tests through input fields and average mark is determined for best three class tests), attendance, semester final, lab course, quiz, report, board viva and project/thesis/shop practice course marks.
 
 * Admin can very easily process academic results.
 
